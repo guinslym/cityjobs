@@ -56,7 +56,7 @@ THIRD_PARTY_APPS =  (
     'django_messages',
 )
 LOCAL_APPS = (
-    'applications.places',
+    #'applications.places',
 )
 
 '''
