@@ -53,10 +53,9 @@ THIRD_PARTY_APPS =  (
     'rest_framework',
      'crispy_forms',
     'bootstrap_pagination',
-    'django_messages',
 )
 LOCAL_APPS = (
-    #'applications.places',
+    'applications.emplois',
 )
 
 '''

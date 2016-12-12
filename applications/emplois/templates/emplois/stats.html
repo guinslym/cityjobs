@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load humanize %}
+
+{% load staticfiles %}
+
+	{% block content %}
+<!-- I had some issue with Django trying to serve static files in Production
+so I decided to put the css and js in a partial -->
+{% include "emplois/static_include.html" %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+
+	<h1>{% trans "statistics" %}</h1>
+
+<button id="example-c-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn btn-info">
+	<i class="icon icon-chevron-left"></i>
+</button>
+
+<button id="example-c-NextDomain-selector" style="margin-bottom: 10px;" class="btn btn-info">
+	<i class="icon icon-chevron-right"></i>
+</button>
+
+	</button>
+
+<div id="example-d"></div>
+<div id="onClick-placeholder">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+{% get_current_language as LANGUAGE_CODE %}
+<script type="text/javascript">
+   var lang = "{{ LANGUAGE_CODE}}"
+</script>
+<script type="text/javascript">
+
+
+Date.prototype.SubtractMonth = function(numberOfMonths) {
+
+	var d = this;
+	d.setMonth(d.getMonth() - numberOfMonths);
+	d.setDate(1);
+
+	return d;
+}
+var thisMonth = new Date();
+
+var cal = new CalHeatMap();
+var hello =0;
+cal.init({
+	itemSelector: "#example-d",
+	domain: "month",
+	//subDomain: "month",
+  itemName: ["job", "jobs"],
+	data: {{ stats }},
+	start: thisMonth.SubtractMonth(5),
+	cellSize: 10,
+	range: 15,
+	legend: [1, 2, 4, 6],
+	previousSelector: "#example-c-PreviousDomain-selector",
+	nextSelector: "#example-c-NextDomain-selector",
+    onClick: function(date, nb) {
+
+        //Add AJAX call for all the jobs for that date
+        //Add cookie or variable for the language i18n
+        /*
+        $("#onClick-placeholder").html("You just clicked <br/>on <b>" +
+            date + "</b> <br/>with <b>" +
+            (nb === null ? "unknown" : nb) + "</b> jobs"
+        );
+*/
+  var le_jour = date.getDate();
+  var le_mois = date.getMonth() + 1;
+  var l_annee = date.getFullYear();
+
+  //console.log(le_jour);
+  //console.log(le_mois);
+  //console.log(l_annee);
+var jqxhr = $.ajax({
+  method: "GET",
+  url: "stats_emplois",
+  data: { mois: le_mois,
+          annee: l_annee,
+          jour:le_jour,
+          language: lang
+        }
+})
+  .done(function(data) {
+    //
+    console.log( data );
+    //mettre les données
+    $("#onClick-placeholder").empty();
+    data.forEach(function(entry) {
+      //console.log(entry);
+      //console.log(entry['fields']['slug'])
+      //console.log(entry['fields']['POSITION']);
+      position = entry['fields']['POSITION'];
+
+      $("#onClick-placeholder").append(
+       "Position : <b style='font-size:18px;'><a href=\"/" + entry['pk'] + "\"</a>" +  position + " </b><br/>" + " date : " +"<b>" +
+      date.toLocaleDateString(lang + '-CA') + "</b> <br/> <b>" + "</b>"
+    );
+
+    });
+    //foreach
+  })
+  .fail(function() {
+    //console.log( "error" );
+    //print error
+  })
+  .always(function() {
+    //console.log( "complete" );
+  });
+
+    }
+});
+</script>
+
+	{% endblock %}

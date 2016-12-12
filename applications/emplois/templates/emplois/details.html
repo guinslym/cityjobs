@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load humanize %}
+
+
+
+	{% block content %}
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>{{ job.POSITION }}</h1>
+
+				<ul>
+{% get_language_info for LANGUAGE_CODE as lang %}
+
+{% if lang.code == 'fr' %}
+					<li><strong>Salary Max: </strong>
+						{% if ',' in job.SALARYMAX %}
+					{{ job.SALARYMAX | intcomma }} $
+					{% else %}
+					{{ job.SALARYMAX | floatformat:2 }} $
+					{% endif %}
+					</li>
+					<li><strong>Salary Min: </strong>
+						{% if ',' in job.SALARYMIN %}
+					{{ job.SALARYMIN | intcomma }} $
+					{% else %}
+					{{ job.SALARYMIN | floatformat:2 }} $
+					{% endif %}
+					</li>
+{% else %}
+					<li><strong>Salary Max: </strong>
+						{% if ',' in job.SALARYMAX %}
+					$ {{ job.SALARYMAX | intcomma }}
+					{% else %}
+					$ {{ job.SALARYMAX | floatformat:2 }}
+					{% endif %}
+					</li>
+					<li><strong>Salary Min: </strong>
+						{% if ',' in job.SALARYMIN %}
+					$ {{ job.SALARYMIN | intcomma }}
+					{% else %}
+					$ {{ job.SALARYMIN | floatformat:2 }}
+{% endif %}
+</li>
+
+
+
+{% endif %}
+
+					<li><strong>Expiring date: </strong>{{ job.EXPIRYDATE }}</li>
+					<li><strong>postdate: </strong> {{ job.POSTDATE| naturalday }}</li>
+					<li><strong>apply link: </strong> <a href="{{ job.JOBURL }}" target="_blank">apply</a></li>
+			</ul>
+
+			{% autoescape off %}
+				{{job.job_summary}}
+				{{job.description_set.all.0.KNOWLEDGE }}
+				{{job.description_set.all.0.EDUCATIONANDEXP }}
+				{{job.description_set.all.0.LANGUAGECERT }}
+				{{job.description_set.all.0.COMPANY_DESC }}
+			{% endautoescape %}
+
+		</div>
+	</div>
+
+<div class="row text-center">
+	<h3><a href="/">Home page</a></h3>
+</div>
+
+
+	{% endblock %}
+
+
+<script type="text/javascript">
+	$(function() {
+	   $("br").remove();
+	});
+</script>

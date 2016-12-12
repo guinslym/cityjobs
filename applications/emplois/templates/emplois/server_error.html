@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load i18n %}
+
+	{% block content %}
+  {% get_language_info for LANGUAGE_CODE as lang %}
+      {% if lang.code == "en" %}
+        <h1>500 -- Server error</h1>
+        <h3>Something wrong happends please contact the administrator</h3>
+        <hr>
+    	{% endif %}
+    {% if lang.code == "fr" %}
+      <h1>Erreur du serveur -- 500</h1>
+      <h3>Veuillez-communiquer avec l'administrateur</h3>
+    {% endif %}
+ {% endblock  %}
+
