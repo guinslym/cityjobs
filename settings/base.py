@@ -83,7 +83,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
-                'django_messages.context_processors.inbox',
+                #'django_messages.context_processors.inbox',
             ],
         },
     },
