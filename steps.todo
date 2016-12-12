@@ -1,9 +1,8 @@
 todo:
-  ☐ CDN to install
   ☐ Languages to set differently
-  ☐ Github to add over settings
 
 Advanced:
+  ☐ Testing
   ☐ Load new data into databases
   ☐ Check Posted within last 2 weeks
   ☐ Check Will expired 2 weeks from now
@@ -14,3 +13,8 @@ ReactJS:
   ☐ Adding ReactJS
   ☐ Adding ReduxJS
   ☐ Adding Authentification
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+  ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+  ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
