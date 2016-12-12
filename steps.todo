@@ -1,0 +1,16 @@
+todo:
+  ☐ CDN to install
+  ☐ Languages to set differently
+  ☐ Github to add over settings
+
+Advanced:
+  ☐ Load new data into databases
+  ☐ Check Posted within last 2 weeks
+  ☐ Check Will expired 2 weeks from now
+  ☐ Background color for 'Expiring date'
+  ☐ Download data to be in JSON, SQL and XML format
+
+ReactJS:
+  ☐ Adding ReactJS
+  ☐ Adding ReduxJS
+  ☐ Adding Authentification
