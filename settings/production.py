@@ -14,7 +14,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.cache.CacheMiddleware',
+    #'django.middleware.cache.CacheMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -38,6 +38,7 @@ DATABASES = {
 
 
 # LOGGING
+'''
 LOGGING = {
      'version': 1,
      'disable_existing_loggers': True,
@@ -81,4 +82,6 @@ LOGGING = {
          },
      },
  }
+ '''
+ 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

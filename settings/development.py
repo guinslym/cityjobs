@@ -19,7 +19,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.cache.CacheMiddleware',
+    #'django.middleware.cache.CacheMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -28,7 +28,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     #'whitenoise.middleware.WhiteNoiseMiddleware',
-    
+
 
 )
 
@@ -45,6 +45,7 @@ DATABASES = {
 
 
 # LOGGING
+'''
 LOGGING = {
      'version': 1,
      'disable_existing_loggers': True,
@@ -88,5 +89,5 @@ LOGGING = {
          },
      },
  }
-
+'''
 EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'

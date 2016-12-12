@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-WSGI_APPLICATION = 'lineez.wsgi.application'
-ROOT_URLCONF = 'lineez.urls'
+WSGI_APPLICATION = 'cityjobs.wsgi.application'
+ROOT_URLCONF = 'cityjobs.urls'
 SITE_ID=1
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -60,43 +60,6 @@ LOCAL_APPS = (
 )
 
 '''
-THIRD_PARTY_APPS =  (
-
-
-    'crispy_forms',
-    #django-friendship   # https://github.com/revsys/django-friendship
-    'friendship',
-    # django-vote        # https://github.com/shanbay/django-vote
-    'vote',
-    # django_ajax        # https://github.com/yceruto/django-ajax
-    #'django_ajax',
-    # django-contrib-comments # https://django-contrib-comments.readthedocs.io/en/latest/quickstart.html
-    #'django_comments',
-    #'bootstrap_pagination',
-    ## Allaouth          # https://django-allauth.readthedocs.io/en/latest/index.html
-    #'allauth',
-    #'allauth.account',
-    #'allauth.socialaccount',
-
-    #'allauth.socialaccount.providers.bitbucket',
-    #'allauth.socialaccount.providers.facebook',
-    #'allauth.socialaccount.providers.github',
-    #'allauth.socialaccount.providers.google',
-    # DRF
-    'rest_framework',
-    'rest_framework.authtoken',
-    # Django-rest-auth          # https://github.com/Tivix/django-rest-auth
-    'rest_auth',
-    'rest_auth.registration',
-)
-'''
-
-
-
-
-
-
-
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
@@ -107,6 +70,7 @@ CACHES = {
         }
     }
 }
+'''
 
 TEMPLATES = [
     {
