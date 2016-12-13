@@ -20,7 +20,8 @@ def insert_this_job_in_the_db(job):
     """
     Insert the Job that we fetch from OttawaJobs to the DB
     """
-    logger.info("This job will be added : " +  job.get('POSITION', None))
+    logger.info("This job will be added : " +  job.get('JOBREF', None))
+    print("This job will be added : {0}".format(job.get('JOBREF', None)))
     salary = job.get('SALARYMAX', None)
     if salary:
         if ',' in salary:
