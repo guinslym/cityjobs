@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import json
+import requests
 import urllib
-from .models import Job, Description
+#from applications.emplois.models import Job, Description
 from dateutil.parser import *
 import logging
 logger = logging.getLogger(__name__)
@@ -81,7 +82,17 @@ def process_it():
         return True
     return False
 
+def download_ottawa_job_list_content():
+    pass
+    
 if __name__ == "__main__":
+    #Filezilla
+    data = requests.get('http://www.ottawacityjobs.ca/en/data/')
+    data = data.json()
+    data = json.dumps(data, ensure_ascii=True, sort_keys=True, indent=4)
+    print(data)
+    #look online for new data
+    # create json file
     #is_there_a_new_json_file()
     #get_the_data_from_this_file()
     pass

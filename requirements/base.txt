@@ -16,3 +16,4 @@ django-braces
 Pillow
 django-vote
 whitenoise
+wget==3.2
