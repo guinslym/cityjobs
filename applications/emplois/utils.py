@@ -83,13 +83,14 @@ def process_it():
     return False
 
 def download_ottawa_job_list_content():
-    pass
-    
-if __name__ == "__main__":
-    #Filezilla
     data = requests.get('http://www.ottawacityjobs.ca/en/data/')
     data = data.json()
     data = json.dumps(data, ensure_ascii=True, sort_keys=True, indent=4)
+    return data
+
+if __name__ == "__main__":
+    #Filezilla
+    data = download_ottawa_job_list_content()
     print(data)
     #look online for new data
     # create json file
