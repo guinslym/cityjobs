@@ -19,7 +19,7 @@ def stringify_object(data):
 #is there a 'full.json' file?
 def is_there_a_new_json_file():
     import os.path
-    if os.path.isfile('full.json'):
+    if os.path.isfile('data_jobs.json'):
         logger.info("There is a full.json file in the current path")
         return True
     else:
@@ -27,7 +27,7 @@ def is_there_a_new_json_file():
 
 #load it
 def get_the_data_from_this_file():
-    with open('full.json', encoding='utf-8') as data_file:
+    with open('data_jobs.json', encoding='utf-8') as data_file:
         data = json.loads(data_file.read())
     return data
 
@@ -63,7 +63,8 @@ def insert_this_job_in_the_db(job):
             )
 
 def check_in_the_db(data):
-    for job in data:
+    for job in data.get('jobs'):
+        import ipdb; ipdb.set_trace()
         jobref = job.get('JOBREF')
         result = Job.objects.filter(JOBREF=jobref)
         if result:
@@ -77,23 +78,27 @@ def process_it():
     file_exist = is_there_a_new_json_file()
     if file_exist:
         data = get_the_data_from_this_file()
+        print('len data ' + str(len(data)))
         logger.info("len data : " + str(len(data)) )
         check_in_the_db(data)
         return True
     return False
 
+
 def download_ottawa_job_list_content():
     data = requests.get('http://www.ottawacityjobs.ca/en/data/')
     data = data.json()
-    #data = json.dumps(data, ensure_ascii=True, sort_keys=True, indent=4)
+    with open('data_jobs.json', 'w') as outfile:
+        json.dump(data, outfile, indent=4, ensure_ascii=True, sort_keys=True)
     return data
 
 if __name__ == "__main__":
     #Filezilla
     data = download_ottawa_job_list_content()
-    check_in_the_db(data)
+    #check_in_the_db(data)
     #look online for new data
     # create json file
     #is_there_a_new_json_file()
     #get_the_data_from_this_file()
+    process_it()
     pass
