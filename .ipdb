@@ -1,0 +1,2 @@
+from applications.emplois.utils import download_ottawa_job_list_content
+from applications.emplois.utils import check_in_the_db
