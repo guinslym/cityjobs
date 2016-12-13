@@ -17,19 +17,25 @@ from django.conf import settings
 from django.conf.urls import url, include, handler404, handler500
 from django.contrib import admin
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 admin.autodiscover()
 
 #from applications.cityjobs.views import *
 
 urlpatterns = [
+    #url(r'^(?P<filename>(robots.txt)|(humans.txt))$',home_files, name='home-files'),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': False}),
+]
+ 
+urlpatterns += i18n_patterns(
     url(r'^emplois/', include('applications.emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('applications.emplois.urls')),
     #url(r'^admin/', admin.site.urls),
     # i18n
-    url(r'^i18n/', include('django.conf.urls.i18n')),
+    #url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^', include('applications.emplois.urls')),
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': False}),
-]# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    
+)# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'applications.emplois.views.handler404'
 handler500 = 'applications.emplois.views.handler500'

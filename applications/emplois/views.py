@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+
+# Standard Python module
+from json import dumps, loads
+from datetime import datetime, timedelta
+
 #Django
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
@@ -7,24 +12,25 @@ from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.conf import settings
+from django.http import HttpResponseRedirect
+
 #pagination
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #Task queues
 #cache
 from django.views.decorators.cache import cache_page
-#models and utils
-from .models import Job, Description
-#from .utils import job_object_list, language_set
-# Standard Python module
-from json import dumps, loads
-from datetime import datetime, timedelta
-# Create your views here.
 
-from django.http import HttpResponseRedirect
-from .utils import download_ottawa_job_list_content
-
+#logging
 import logging
 logger = logging.getLogger(__name__)
+
+#models and utils
+from .models import Job, Description
+from .utils import download_ottawa_job_list_content
+
+# Create your views here.
+
+
 
 def language_set(language):
     if "-" in language:
@@ -150,6 +156,16 @@ class DetailView(generic.DetailView):
     template_name = 'emplois/details.html'
     context_object_name='job'
 
+    def language(self):
+        """Return the user default language"""
+        language = language_set(self.request.LANGUAGE_CODE)
+        return language
+
+    def get_queryset(self, **kwargs):
+        pk = int(self.kwargs.get('pk'))
+        obj = Job.objects.filter(pk=pk, language=(self.request.LANGUAGE_CODE).upper())
+        return obj
+
 #http://localhost:8001/emplois/stats
 class StatsView(generic.TemplateView):
     """
@@ -261,7 +277,7 @@ def download(request):
     """
     import datetime
     data = serializers.serialize('json', Job.objects.all() )
-    data = dumps(loads(data), indent=4)
+    data = dumps(loads(data), indent=4, ensure_ascii=True, sort_keys=True)
     return HttpResponse(data, content_type='application/json')
 
 
