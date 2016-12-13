@@ -156,15 +156,6 @@ class DetailView(generic.DetailView):
     template_name = 'emplois/details.html'
     context_object_name='job'
 
-    def language(self):
-        """Return the user default language"""
-        language = language_set(self.request.LANGUAGE_CODE)
-        return language
-
-    def get_queryset(self, **kwargs):
-        pk = int(self.kwargs.get('pk'))
-        obj = Job.objects.filter(pk=pk, language=(self.request.LANGUAGE_CODE).upper())
-        return obj
 
 #http://localhost:8001/emplois/stats
 class StatsView(generic.TemplateView):
