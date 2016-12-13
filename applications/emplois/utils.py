@@ -67,10 +67,10 @@ def check_in_the_db(data):
         jobref = job.get('JOBREF')
         result = Job.objects.filter(JOBREF=jobref)
         if result:
-            print('Already in the DB')
-            logger.info('Already in the DB')
+            print('Already in the DB {0}'.format(jobref))
+            logger.info('Already in the DB ' + jobref)
         else:
-            logger.info('A new job will be added')
+            logger.info('A new job will be added {0}'.format(jobref))
             insert_this_job_in_the_db(job)
 
 def process_it():
@@ -85,11 +85,12 @@ def process_it():
 
 
 def download_ottawa_job_list_content():
-    data_en = requests.get('http://www.ottawacityjobs.ca/en/data/')
-    data_fr = requests.get('http://www.ottawacityjobs.ca/fr/data/')
-    data_en = data_en.json()
-    data_fr = data_fr.json()
-    data = data_fr
+    urls = ['http://www.ottawacityjobs.ca/en/data/',
+           'http://www.ottawacityjobs.ca/fr/data/']
+    for url in urls:
+        data = requests.get(url)
+        data = data.json()
+        check_in_the_db(data)
     with open('data_jobs.json', 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=True, sort_keys=True)
     return data
