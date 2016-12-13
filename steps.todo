@@ -1,8 +1,8 @@
 todo:
   ☐ Languages to set differently
-  ☐ download the sqlite
-  ☐ remove the process to create a file
-  ☐ tests
+  ☐ tests utils.py
+  ✔ download the sqlite @done (16-12-13 07:15)
+  ✔ remove the process to create a file @done (16-12-13 07:59)
 
 Advanced:
   ☐ Testing

@@ -79,9 +79,5 @@ def download_ottawa_job_list_content():
     return data
 
 if __name__ == "__main__":
-    #Filezilla
     data = download_ottawa_job_list_content()
-    #check_in_the_db(data)
-    #look online for new data
-    # create json file
     pass

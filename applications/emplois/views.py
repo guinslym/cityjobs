@@ -21,7 +21,7 @@ from datetime import datetime, timedelta
 # Create your views here.
 
 from django.http import HttpResponseRedirect
-from .utils import process_it
+from .utils import download_ottawa_job_list_content
 
 import logging
 logger = logging.getLogger(__name__)
@@ -282,7 +282,7 @@ def update_and_tweets(request):
     upgrade_time = True# now_time >= time(17,00) and now_time <= time(19,30)
 
     if upgrade_time:
-        res = process_it()
+        res = download_ottawa_job_list_content()
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
         logger.info('yes we added new jobs')
         return redirect("/")
