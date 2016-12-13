@@ -13,6 +13,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.conf import settings
 from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404
 
 #pagination
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -144,6 +145,15 @@ class AllJobsView(generic.ListView):
         """
         return Job.objects.filter(language=self.language()).order_by('POSTDATE')
 
+def detail(request):
+    obj = get_object_or_404(Job, pk=request.pk)
+    obj = get_object_or_404(
+        Job.objects.filter(
+                    JOBREF__contains=obj.JOBREF.split('-')[-1],
+                    language=(self.request.LANGUAGE_CODE).upper())
+        )
+    return render(request, 'emplois/details.html', context)
+
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
     """
@@ -156,6 +166,18 @@ class DetailView(generic.DetailView):
     template_name = 'emplois/details.html'
     context_object_name='job'
 
+    def language(self):
+        """Return the user default language"""
+        language = language_set(self.request.LANGUAGE_CODE)
+        return language
+
+    def get_queryset(self, **kwargs):
+        #import ipdb; ipdb.set_trace()
+        
+        pk = int(self.kwargs.get('pk'))
+        obj = Job.objects.get(pk=pk)
+        obj = Job.objects.filter(JOBREF__contains=obj.JOBREF.split('-')[-1], language=(self.request.LANGUAGE_CODE).upper())
+        return obj
 
 #http://localhost:8001/emplois/stats
 class StatsView(generic.TemplateView):
