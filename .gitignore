@@ -25,6 +25,7 @@ cache/
 secret_key.txt
 #settings/production.py
 staticfiles/
+envpython3/
 htmlcov/
 applications/*/tests/
 description.todo

@@ -3,7 +3,7 @@
 import json
 import requests
 import urllib
-#from applications.emplois.models import Job, Description
+from applications.emplois.models import Job, Description
 from dateutil.parser import *
 import logging
 logger = logging.getLogger(__name__)
@@ -64,7 +64,6 @@ def insert_this_job_in_the_db(job):
 
 def check_in_the_db(data):
     for job in data.get('jobs'):
-        import ipdb; ipdb.set_trace()
         jobref = job.get('JOBREF')
         result = Job.objects.filter(JOBREF=jobref)
         if result:
@@ -86,8 +85,11 @@ def process_it():
 
 
 def download_ottawa_job_list_content():
-    data = requests.get('http://www.ottawacityjobs.ca/en/data/')
-    data = data.json()
+    data_en = requests.get('http://www.ottawacityjobs.ca/en/data/')
+    data_fr = requests.get('http://www.ottawacityjobs.ca/fr/data/')
+    data_en = data_en.json()
+    data_fr = data_fr.json()
+    data = data_fr
     with open('data_jobs.json', 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=True, sort_keys=True)
     return data

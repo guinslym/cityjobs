@@ -1,11 +1,14 @@
 todo:
   ☐ Languages to set differently
+  ☐ download the sqlite
+  ☐ remove the process to create a file
+  ☐ tests
 
 Advanced:
   ☐ Testing
-  ☐ Load new data into databases
-  ☐ Check Posted within last 2 weeks
-  ☐ Check Will expired 2 weeks from now
+  ✔ Load new data into databases @done (16-12-12 23:10)
+  ✔ Check Posted within last 2 weeks @done (16-12-12 23:10)
+  ✔ Check Will expired 2 weeks from now @done (16-12-12 23:10)
   ☐ Background color for 'Expiring date'
   ☐ Download data to be in JSON, SQL and XML format
 
