@@ -16,27 +16,17 @@ def stringify_object(data):
     expirydate = str(expirydate).split(' ')[0]
     return expirydate
 
-#is there a 'full.json' file?
-def is_there_a_new_json_file():
-    import os.path
-    if os.path.isfile('data_jobs.json'):
-        logger.info("There is a full.json file in the current path")
-        return True
-    else:
-        return False
-
-#load it
-def get_the_data_from_this_file():
-    with open('data_jobs.json', encoding='utf-8') as data_file:
-        data = json.loads(data_file.read())
-    return data
-
 def insert_this_job_in_the_db(job):
+    """
+    Insert the Job that we fetch from OttawaJobs to the DB
+    """
     logger.info("This job will be added : " +  job.get('POSITION', None))
     salary = job.get('SALARYMAX', None)
     if salary:
         if ',' in salary:
             salary = salary.replace(',', '')
+
+    #create model object
     emploi_model = Job(
         JOBURL = job.get('JOBURL', None),
         EXPIRYDATE =  stringify_object(job.get('EXPIRYDATE', None)),
@@ -50,10 +40,9 @@ def insert_this_job_in_the_db(job):
         JOBREF = job.get('JOBREF', None),
         JOB_SUMMARY =job.get('JOB_SUMMARY', None),
     )
-    #save Description to db
-    #list_emploi.append( emploi.get('JOBREF'))
-    #print(emploi_model.jobref)
     emploi_model.save()
+
+    #save Description to db
     emploi_model.description_set.create(
         KNOWLEDGE = job.get('KNOWLEDGE', None),
         LANGUAGE_CERTIFICATES = job.get('LANGUAGE_CERTIFICATES', None),
@@ -63,6 +52,10 @@ def insert_this_job_in_the_db(job):
             )
 
 def check_in_the_db(data):
+    """
+    Check if we have already have this Job id (jobref) in
+    the db
+    """
     for job in data.get('jobs'):
         jobref = job.get('JOBREF')
         result = Job.objects.filter(JOBREF=jobref)
@@ -72,17 +65,6 @@ def check_in_the_db(data):
         else:
             logger.info('A new job will be added {0}'.format(jobref))
             insert_this_job_in_the_db(job)
-
-def process_it():
-    file_exist = is_there_a_new_json_file()
-    if file_exist:
-        data = get_the_data_from_this_file()
-        print('len data ' + str(len(data)))
-        logger.info("len data : " + str(len(data)) )
-        check_in_the_db(data)
-        return True
-    return False
-
 
 def download_ottawa_job_list_content():
     urls = ['http://www.ottawacityjobs.ca/en/data/',
@@ -101,7 +83,4 @@ if __name__ == "__main__":
     #check_in_the_db(data)
     #look online for new data
     # create json file
-    #is_there_a_new_json_file()
-    #get_the_data_from_this_file()
-    process_it()
     pass
