@@ -1,8 +1,8 @@
 todo:
   ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
-  ☐ update
+  ✔ update @done(2016-12-14 14:55) @project(todo)
   ☐ Stats...links
-  ☐ Same layout for expiration date
+  ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
   ☐ XML Feeds
@@ -13,6 +13,7 @@ Advanced:
   ☐ Testing
   ☐ Background color for 'Expiring date'
   ☐ Download data to be in JSON, SQL and XML format
+  ☐ About how-to same layout
 
 ReactJS:
   ☐ Adding ReactJS
