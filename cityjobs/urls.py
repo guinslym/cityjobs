@@ -18,10 +18,13 @@ from django.conf.urls import url, include, handler404, handler500
 from django.contrib import admin
 from django.conf.urls.static import static
 admin.autodiscover()
+from applications.emplois.views import robot_files
 
 #from applications.cityjobs.views import *
 
 urlpatterns = [
+    url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
+
     url(r'^emplois/', include('applications.emplois.urls', namespace="emplois")),
     url(r'^', include('applications.emplois.urls')),
 

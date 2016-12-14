@@ -33,6 +33,9 @@ from .utils import download_ottawa_job_list_content
 
 
 
+def robot_files(request, filename):
+    return render(request, filename, {}, content_type="text/plain")
+
 def language_set(language):
     if "-" in language:
         return (language.split('-')[1]).upper()
@@ -173,7 +176,7 @@ class DetailView(generic.DetailView):
         # other language = '2016-EX-FR-51534056'
         #Get the equivalent language
         obj = Job.objects.filter(
-                JOBREF__contains=obj.JOBREF.split('-')[-1], 
+                JOBREF__contains=obj.JOBREF.split('-')[-1],
                 language=(self.request.LANGUAGE_CODE).upper()
                 )
         return obj

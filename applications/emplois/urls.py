@@ -4,11 +4,13 @@ from django.conf.urls import url, include
 from . import views
 from django.views import generic
 from django.views.decorators.cache import cache_page
+from applications.emplois.views import robot_files
 __author__ = 'Guinsly'
 
 app_name = 'emplois'
 urlpatterns = [
       #url(r'^$', views.hello, name='index'),
+      url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
 
       url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
       #url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
