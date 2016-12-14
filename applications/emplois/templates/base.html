@@ -9,7 +9,13 @@
   <meta name="author" content="Guinsly Mondésir">
   <meta name="author" content="Mongex.info">
   <meta name='subject' content="">
-  <title>Ottawa: Jobs with the City - Open Data / Emplois à la ville d'Ottawa - Données Ouvertes</title>
+
+  {% ifequal LANGUAGE_CODE "en" %}
+    <title>Ottawa: Jobs with the City - Open Data</title>
+  {% else %}
+    <title>Emplois à la ville d'Ottawa - Données Ouvertes</title>
+  {% endifequal %}
+
   <meta name='copyright' content='@mongexserv'>
   <meta name='language' content='EN, FR'>
   <link href="http://data.ottawa.ca/img/favicon.ico" rel="icon" type="image/x-icon"/>
