@@ -77,7 +77,7 @@
 		{% endif %}
 
 
-			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.EXPIRYDATE }}</li>
+			<li><strong>{% trans "Expiring date"%} : </strong> <em>{{ emploi.EXPIRYDATE }}  </em></li>
 			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.POSTDATE| naturalday }}</li>
 			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.JOBURL }}" target="_blank">{% trans "Apply"%}</a></li>
 		</ul>
