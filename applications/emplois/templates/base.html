@@ -187,7 +187,7 @@ div.jumbotron img{
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-            {% if  'searchjob' not in request.get_full_path %}
+            {% if  not language_switcher_off %}
                 {% ifequal LANGUAGE_CODE "en" %}
                   <li><a href="/fr{{ request.get_full_path|slice:'3:' }}">Français</a></li>
                 {% else %}
@@ -217,12 +217,14 @@ div.jumbotron img{
     <div class="col-lg-10  col-lg-offset-1 text-center" id="main-page">
     <h3>Ottawa City Jobs</h3>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png">
-   <form accept-charset="UTF-8" action="searchJobs/" class="form-group main-form" id="search-form" method="get">
-   {% csrf_token %}
-      <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
-      <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
-      <input class="btn btn-warning" type="submit" value="{% trans "Search" %}">
-   </form>
+
+
+       <form accept-charset="UTF-8" action="searchJobs/" class="form-group main-form" id="search-form" method="get">
+       {% csrf_token %}
+          <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+          <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
+          <input class="btn btn-warning" type="submit" value="{% trans "Search" %}">
+       </form>
 
 </div>
 </div>

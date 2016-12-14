@@ -1,10 +1,10 @@
 todo:
-  ☐ Languages to set differently
-  ☐ Remove - Translation
-    ☐ SearchJobs
-    ☐ Emplois Detail
-    ☐ by slug
-  ☐ one urls
+  ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
+  ✔ Remove - Language Switcher @done(2016-12-14 14:22) @project(todo)
+    ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
+    ✔ Emplois Detail @done(2016-12-14 14:21) @project(todo)
+  ✔ one urls @done(2016-12-14 14:21) @project(todo)
+  ☐ Translate Job found {}
   ☐ tests utils.py
   ☐ XML Feeds
   ☐ SiteMaps
