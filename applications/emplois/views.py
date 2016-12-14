@@ -181,6 +181,12 @@ class DetailView(generic.DetailView):
                 )
         return obj
 
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(
+            **kwargs)
+        context["language_switcher"] = False
+        return context
+
 #http://localhost:8001/emplois/stats
 class StatsView(generic.TemplateView):
     """
@@ -233,35 +239,7 @@ class AboutView(generic.TemplateView):
 
         return context
 
-#http://localhost:8001/emplois/searchJobs/<searchKey>
-#@cache_page(60 * 1, key_prefix="site1"  )
-def job_search(request):
-    """
-    This function will receive a query
-    from the Search Box and will return a list of
-    jobs from that query
-    """
-    if 'searchKey' in request.GET:
-        keyword = request.GET['searchKey']
-        if not keyword :
-                return redirect('/')
-        else:
-            lang = language_set(request.LANGUAGE_CODE)
-            latest_jobs_list = Job.objects.filter(POSITION__icontains\
-                    = keyword,language__icontains=lang).\
-                    order_by('-POSTDATE')
-            paginator = Paginator(latest_jobs_list, 10)
-            page = request.GET.get('page')
-            try:
-                latest_jobs_list = paginator.page(page)
-            except PageNotAnInteger:
-                # If page is not an integer, deliver first page.
-                latest_jobs_list = paginator.page(1)
-            except EmptyPage:
-                # If page is out of range (e.g. 9999), deliver last page of results.
-                latest_jobs_list = paginator.page(paginator.num_pages)
-            return render(request,'emplois/result.html',{'latest_jobs_list':latest_jobs_list})
-    return redirect('/')
+
 
 ##########JAVASCRIPT = JSOM ##########
 #http://localhost:8001/emplois/<annee>/<mois>/<jour>
@@ -322,12 +300,44 @@ def update_and_tweets(request):
         return redirect("/")
 
 
-#Error on this template
+#http://localhost:8001/emplois/searchJobs/<searchKey>
+#@cache_page(60 * 1, key_prefix="site1"  )
+def job_search(request):
+    """
+    This function will receive a query
+    from the Search Box and will return a list of
+    jobs from that query
+    """
+    if 'searchKey' in request.GET:
+        keyword = request.GET['searchKey']
+        if not keyword :
+                return redirect('/')
+        else:
+            lang = language_set(request.LANGUAGE_CODE)
+            latest_jobs_list = Job.objects.filter(POSITION__icontains\
+                    = keyword,language__icontains=lang).\
+                    order_by('-POSTDATE')
+            paginator = Paginator(latest_jobs_list, 10)
+            page = request.GET.get('page')
+            try:
+                latest_jobs_list = paginator.page(page)
+            except PageNotAnInteger:
+                # If page is not an integer, deliver first page.
+                latest_jobs_list = paginator.page(1)
+            except EmptyPage:
+                # If page is out of range (e.g. 9999), deliver last page of results.
+                latest_jobs_list = paginator.page(paginator.num_pages)
+            return render(request,'emplois/result.html',
+                            {'latest_jobs_list':latest_jobs_list,
+                            'language_switcher':False})
+    return redirect('/')
+
+#Error on this View
 #I try  to create a Class based view of 'def job_search()'
 class SearchJobView(generic.ListView):
     """
     An attempt to use a Class Based view to
-    process the job search
+    process the job_search
     """
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
@@ -339,6 +349,13 @@ class SearchJobView(generic.ListView):
             return Job.objects.filter(POSITION__icontains = keyword).order_by('-POSTDATE')
         else:
             return redirect('/')
+
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(
+            **kwargs)
+        context["language_switcher"] = False
+        return context
+
 
 def handler404(request):
     response = render(request, 'emplois/page_not_found.html')
