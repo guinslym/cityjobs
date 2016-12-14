@@ -147,12 +147,10 @@ class AllJobsView(generic.ListView):
 
 def detail(request):
     obj = get_object_or_404(Job, pk=request.pk)
-    obj = get_object_or_404(
-        Job.objects.filter(
+    obj = Job.objects.filter(
                     JOBREF__contains=obj.JOBREF.split('-')[-1],
                     language=(self.request.LANGUAGE_CODE).upper())
-        )
-    return render(request, 'emplois/details.html', context)
+    return render(request, 'emplois/details.html', {'job':obj})
 
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
