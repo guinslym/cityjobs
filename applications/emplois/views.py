@@ -184,7 +184,7 @@ class DetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(
             **kwargs)
-        context["language_switcher"] = False
+        context["language_switcher_off"] = True
         return context
 
 #http://localhost:8001/emplois/stats
@@ -314,10 +314,11 @@ def job_search(request):
                 return redirect('/')
         else:
             lang = language_set(request.LANGUAGE_CODE)
-            latest_jobs_list = Job.objects.filter(POSITION__icontains\
+            latest_jobs_list = Job.objects.filter(
+                    POSITION__icontains\
                     = keyword,language__icontains=lang).\
                     order_by('-POSTDATE')
-            paginator = Paginator(latest_jobs_list, 10)
+            paginator = Paginator(latest_jobs_list, 60)
             page = request.GET.get('page')
             try:
                 latest_jobs_list = paginator.page(page)
@@ -329,7 +330,7 @@ def job_search(request):
                 latest_jobs_list = paginator.page(paginator.num_pages)
             return render(request,'emplois/result.html',
                             {'latest_jobs_list':latest_jobs_list,
-                            'language_switcher':False})
+                            'language_switcher_off':True})
     return redirect('/')
 
 #Error on this View

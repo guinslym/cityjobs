@@ -187,6 +187,11 @@ div.jumbotron img{
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
+            {% ifequal LANGUAGE_CODE "en" %}
+              <li><a href="/fr{{ request.get_full_path|slice:'3:' }}">Français</a></li>
+            {% else %}
+              <li><a href="/en{{ request.get_full_path|slice:'3:' }}">English</a></li>
+            {% endifequal %}
             <li><a href="{% url 'emplois:stats' %}">{% trans "Stats"%}</a></li>
             <li><a href="{% url 'emplois:about' %}">{% trans "About"%}</a></li>
             <li><a href="{% url 'emplois:download' %}">{% trans "Download"%}</a></li>
@@ -251,7 +256,7 @@ div.jumbotron img{
                 <button type="submit"
                         name="language"
                         value="{{ language.code }}"
-                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %} btn btn-primary btn-xs">
                     {{ language.name_local }}
                 </button>
             </li>
