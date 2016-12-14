@@ -1,24 +1,14 @@
 todo:
-  ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
-  ✔ Remove - Language Switcher @done(2016-12-14 14:22) @project(todo)
-    ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
-    ✔ Emplois Detail @done(2016-12-14 14:21) @project(todo)
-  ✔ one urls @done(2016-12-14 14:21) @project(todo)
-  ☐ Translate Job found {}
+  ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
+  ☐ Same layout for expiration date
+  ☐ Try for paginating jobSearch
   ☐ tests utils.py
   ☐ XML Feeds
   ☐ SiteMaps
   ☐ Add contributions of Denis
-  ✔ Favicon @done(2016-12-14 12:37) @project(todo)
-  ✔ Title fr or EN @done(2016-12-14 12:40) @project(todo)
-  ✔ download the sqlite @done (16-12-13 07:15)
-  ✔ remove the process to create a file @done (16-12-13 07:59)
 
 Advanced:
   ☐ Testing
-  ✔ Load new data into databases @done (16-12-12 23:10)
-  ✔ Check Posted within last 2 weeks @done (16-12-12 23:10)
-  ✔ Check Will expired 2 weeks from now @done (16-12-12 23:10)
   ☐ Background color for 'Expiring date'
   ☐ Download data to be in JSON, SQL and XML format
 
@@ -29,5 +19,17 @@ ReactJS:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
+  ✔ Remove - Language Switcher @done(2016-12-14 14:22) @project(todo)
+  ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
+  ✔ Emplois Detail @done(2016-12-14 14:21) @project(todo)
+  ✔ one urls @done(2016-12-14 14:21) @project(todo)
+  ✔ Favicon @done(2016-12-14 12:37) @project(todo)
+  ✔ Title fr or EN @done(2016-12-14 12:40) @project(todo)
+  ✔ download the sqlite @done (16-12-13 07:15)
+  ✔ remove the process to create a file @done (16-12-13 07:59)
+  ✔ Load new data into databases @done (16-12-12 23:10)
+  ✔ Check Posted within last 2 weeks @done (16-12-12 23:10)
+  ✔ Check Will expired 2 weeks from now @done (16-12-12 23:10)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)

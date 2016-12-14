@@ -57,8 +57,6 @@ msgstr "emplois trouvés pour"
 
 #: emplois/templates/emplois/index.html:20
 #: emplois/templates/emplois/result.html:19
-#, fuzzy
-#| msgid "jobs found for"
 msgid "jobs found"
 msgstr "emplois trouvés pour"
 
