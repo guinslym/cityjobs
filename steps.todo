@@ -8,14 +8,14 @@ todo:
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ XML Feeds
-  ☐ Return to homepage : add icon
-  ☐ Add contributions of Denis
+  ✔ Return to homepage : add icon @done(2016-12-14 16:38) @project(todo)
+  ✔ Add contributions of Denis @done(2016-12-14 16:38) @project(todo)
 
 Advanced:
   ☐ Testing
-  ☐ Background color for 'Expiring date'
+  ✔ Background color for 'Expiring date' @done(2016-12-14 16:38) @project(Advanced)
   ☐ Download data to be in JSON, SQL and XML format, YAML
-  ☐ About: how-to same layout for date
+  ✔ About: how-to same layout for date @done(2016-12-14 16:38) @project(Advanced)
   ☐ About: Robots.txt and Humans.txt
   ☐ Pagination where is the last button
   ☐ Retrieve data from ELUTA not OttawaCityJobs
