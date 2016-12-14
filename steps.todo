@@ -1,5 +1,5 @@
 todo:
-  ☐ Update : add new jobs
+  ✔ Update : add new jobs @done(2016-12-14 17:06) @project(todo)
   ☐ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now
   ☐ Cronjobs
   ☐ Try for paginating jobSearch
