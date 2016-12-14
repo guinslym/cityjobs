@@ -1,9 +1,10 @@
 todo:
   ☐ Languages to set differently
-  ☐ DetailView remove (Languages-Switching)
+  ☐ Remove - Translation
+    ☐ Search
+    ☐ Emplois Detail
   ☐ one urls
   ☐ tests utils.py
-  ☐ add Ottawajobs components
   ☐ XML Feeds
   ☐ SiteMaps
   ☐ Add contributions of Denis
