@@ -1,6 +1,7 @@
 todo:
+  ☐ Update : add new jobs
+  ☐ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now
   ☐ Cronjobs
-  ☐ Upload online
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
   ☐ SiteMaps
