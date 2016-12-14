@@ -1,7 +1,8 @@
 todo:
   ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
   ✔ update @done(2016-12-14 14:55) @project(todo)
-  ☐ Stats...links
+  ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
+  ☐ buts in contains: Manager, Digital Service & Innovation 
   ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
