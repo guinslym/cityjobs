@@ -34,7 +34,7 @@ from .utils import download_ottawa_job_list_content
 
 
 def robot_files(request, filename):
-    return render(request, filename, {}, content_type="text/plain")
+    return render(request, 'emplois/'+filename, {}, content_type="text/plain")
 
 def language_set(language):
     if "-" in language:

@@ -12,8 +12,12 @@ todo:
 Advanced:
   ☐ Testing
   ☐ Background color for 'Expiring date'
-  ☐ Download data to be in JSON, SQL and XML format
-  ☐ About how-to same layout
+  ☐ Download data to be in JSON, SQL and XML format, YAML
+  ☐ About: how-to same layout for date
+  ☐ About: Robots.txt and Humans.txt
+  ☐ Pagination where is the last button
+  ☐ Retrieve data from ELUTA not OttawaCityJobs
+  ☐ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same
 
 ReactJS:
   ☐ Adding ReactJS

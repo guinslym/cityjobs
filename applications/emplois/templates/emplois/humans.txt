@@ -2,10 +2,10 @@
 # The humans responsible & technology colophon
 
 # TEAM
-    Guinsly Mondésir -- Developer -- @guinslym
+    Guinsly Mondesir -- Developer -- @guinslym
 
 # THANKS
-    Thanks to Open Data Book club
+    Thanks to Open Data Book club Meetup and Open Data Ottawa
 
 # TECHNOLOGY COLOPHON
     Django
