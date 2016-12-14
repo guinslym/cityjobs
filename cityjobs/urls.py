@@ -18,7 +18,7 @@ from django.conf.urls import url, include, handler404, handler500
 from django.contrib import admin
 from django.conf.urls.static import static
 admin.autodiscover()
-from applications.emplois.views import robot_files
+from applications.emplois.views import robot_files, update_and_tweets
 from django.views.decorators.cache import cache_page
 from django.conf.urls.i18n import i18n_patterns
 
@@ -27,6 +27,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
     url(r'^searchJobs/$', cache_page(60 * 15)('applications.emplois.views.job_search'), name='job_search'),
+    url(r'^update/$', update_and_tweets, name='upgrade'),
 ]
 
 

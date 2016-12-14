@@ -17,3 +17,4 @@ Pillow
 django-vote
 whitenoise
 wget==3.2
+pytz

@@ -1,7 +1,7 @@
 import socket
 
 #My laptop is name 'Guinsly-thinkpad-lenovo'
-if 'MRT' not in socket.gethostname():
+if 'MRT' in socket.gethostname():
     from .development import *
     print('--dev--settings--')
 else:
