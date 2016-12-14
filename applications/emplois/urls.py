@@ -10,8 +10,8 @@ app_name = 'emplois'
 urlpatterns = [
       #url(r'^$', views.hello, name='index'),
 
-      #url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
-      url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
+      url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+      #url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
 
       url(r'^stats$', views.StatsView.as_view(), name='stats'),
       url(r'^searchJobs/$', cache_page(60 * 15)(views.job_search), name='job_search'),

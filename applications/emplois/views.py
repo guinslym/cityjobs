@@ -164,16 +164,14 @@ class DetailView(generic.DetailView):
     template_name = 'emplois/details.html'
     context_object_name='job'
 
-    def language(self):
-        """Return the user default language"""
-        language = language_set(self.request.LANGUAGE_CODE)
-        return language
-
     def get_queryset(self, **kwargs):
         #import ipdb; ipdb.set_trace()
 
         pk = int(self.kwargs.get('pk'))
         obj = Job.objects.get(pk=pk)
+        # i.e obj.JOBREF = '2016-EX-EN-51534056'
+        # other language = '2016-EX-FR-51534056'
+        #Get the equivalent language
         obj = Job.objects.filter(
                 JOBREF__contains=obj.JOBREF.split('-')[-1], 
                 language=(self.request.LANGUAGE_CODE).upper()
