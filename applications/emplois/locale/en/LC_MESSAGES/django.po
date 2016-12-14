@@ -19,7 +19,7 @@ msgstr ""
 
 #: emplois/templates/base.html:161
 msgid "Ottawa City Jobs"
-msgstr "Ottawa City Jobs"
+msgstr "Ottawa: Jobs with the City"
 
 #: emplois/templates/base.html:170
 msgid "Stats"

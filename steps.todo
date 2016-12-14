@@ -1,7 +1,10 @@
 todo:
   ☐ Languages to set differently
+  ☐ DetailView remove (Languages-Switching)
   ☐ tests utils.py
   ☐ add Ottawajobs components
+  ✔ Favicon @done(2016-12-14 12:37) @project(todo)
+  ☐ Title fr or EN
   ✔ download the sqlite @done (16-12-13 07:15)
   ✔ remove the process to create a file @done (16-12-13 07:59)
 
