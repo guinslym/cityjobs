@@ -95,7 +95,13 @@ class LatestView(generic.ListView):
         Order: by PUBLICATION DATE
         """
         return Job.objects.filter(language=self.language(),
-        POSTDATE__gte=datetime.now()-timedelta(days=14)).order_by('-POSTDATE')
+        POSTDATE__gte=datetime.now()-timedelta(days=14)).order_by('EXPIRYDATE')
+
+    def get_context_data(self, **kwargs):
+        context = super(LatestView, self).get_context_data(
+            **kwargs)
+        context["posted_last_2_weeks"] = True
+        return context
 
 
 #http://localhost:8001/emplois/expiring
@@ -126,6 +132,12 @@ class ExpiringSoonView(generic.ListView):
          EXPIRYDATE__lte=ending_in_two_weeks,EXPIRYDATE__gte=today)\
                  .order_by('EXPIRYDATE')
 
+    def get_context_data(self, **kwargs):
+        context = super(ExpiringSoonView, self).get_context_data(
+            **kwargs)
+        context["epired_in_2_weeks"] = True
+        return context
+
 #http://localhost:8001/emplois/all_job_posted
 class AllJobsView(generic.ListView):
     """
@@ -146,7 +158,13 @@ class AllJobsView(generic.ListView):
         order by: PUBLICATION DATE
         latest is at the end
         """
-        return Job.objects.filter(language=self.language()).order_by('POSTDATE')
+        return Job.objects.filter(language=self.language()).order_by('EXPIRYDATE')
+
+    def get_context_data(self, **kwargs):
+        context = super(AllJobsView, self).get_context_data(
+            **kwargs)
+        context["all_jobs"] = True
+        return context
 
 def detail(request):
     obj = get_object_or_404(Job, pk=request.pk)
