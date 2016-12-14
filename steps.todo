@@ -1,7 +1,4 @@
 todo:
-  ✔ Update : add new jobs @done(2016-12-14 17:06) @project(todo)
-  ✔ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now @done(2016-12-14 17:20) @project(todo)
-  ✔ Cronjobs @done(2016-12-14 18:17) @project(todo)
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
   ☐ SiteMaps
@@ -10,7 +7,6 @@ todo:
 Advanced:
   ☐ Testing
   ☐ Downloaded data to be in JSON, SQL and XML format, YAML
-  ✔ Pagination where is the last button??? @done(2016-12-14 17:02) @project(Advanced)
   ☐ Retrieve data from ELUTA not neccessarly from OttawaCityJobs
   ☐ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same
 
@@ -21,6 +17,10 @@ ReactJS:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Update : add new jobs @done(2016-12-14 17:06) @project(todo)
+  ✔ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now @done(2016-12-14 17:20) @project(todo)
+  ✔ Cronjobs @done(2016-12-14 18:17) @project(todo)
+  ✔ Pagination where is the last button??? @done(2016-12-14 17:02) @project(Advanced)
   ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
   ✔ update @done(2016-12-14 14:55) @project(todo)
   ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
