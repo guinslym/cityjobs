@@ -178,7 +178,7 @@ div.jumbotron img{
 <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <a href="{{ request.get_full_path }}" class="navbar-brand">{% trans "Ottawa City Jobs"%}</a>
+          <a href="/" class="navbar-brand">{% trans "Ottawa City Jobs"%}</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -210,7 +210,7 @@ div.jumbotron img{
     <div class="col-lg-10  col-lg-offset-1 text-center" id="main-page">
     <h3>Ottawa City Jobs</h3>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png">
-   <form accept-charset="UTF-8" action="/emplois/searchJobs" class="form-group main-form" id="search-form" method="get">
+   <form accept-charset="UTF-8" action="searchJobs/" class="form-group main-form" id="search-form" method="get">
    {% csrf_token %}
       <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
       <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">

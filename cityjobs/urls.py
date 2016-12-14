@@ -19,12 +19,14 @@ from django.contrib import admin
 from django.conf.urls.static import static
 admin.autodiscover()
 from applications.emplois.views import robot_files
+from django.views.decorators.cache import cache_page
 from django.conf.urls.i18n import i18n_patterns
 
 #from applications.cityjobs.views import *
 
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
+    url(r'^searchJobs/$', cache_page(60 * 15)('applications.emplois.views.job_search'), name='job_search'),
 ]
 
 

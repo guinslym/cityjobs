@@ -31,7 +31,7 @@ msgstr "À Propos"
 
 #: emplois/templates/base.html:175
 msgid "Download"
-msgstr ""
+msgstr "Télécharger"
 
 #: emplois/templates/base.html:192
 msgid "Search by Job title"
