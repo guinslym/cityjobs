@@ -45,7 +45,6 @@ DATABASES = {
 
 
 # LOGGING
-'''
 LOGGING = {
      'version': 1,
      'disable_existing_loggers': True,
@@ -89,5 +88,4 @@ LOGGING = {
          },
      },
  }
-'''
 EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'

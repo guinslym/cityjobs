@@ -28,17 +28,11 @@ MIDDLEWARE_CLASSES = (
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+#Another database (MYSQL)
 
 
 
 # LOGGING
-'''
 LOGGING = {
      'version': 1,
      'disable_existing_loggers': True,
@@ -55,7 +49,7 @@ LOGGING = {
              'level': 'INFO',
              'class': 'logging.FileHandler',
              'formatter': 'verbose',
-             'filename': BASE_DIR+'/logs/log.log',
+             'filename': BASE_DIR+'/logs/prod.log',
              'mode': 'a',
          },
      },
@@ -82,6 +76,5 @@ LOGGING = {
          },
      },
  }
- '''
- 
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
