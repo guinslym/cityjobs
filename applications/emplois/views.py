@@ -290,6 +290,8 @@ def update_and_tweets(request):
     #tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
     upgrade_time = True# now_time >= time(17,00) and now_time <= time(19,30)
 
+    # I don't Tweets anymore...
+
     if upgrade_time:
         res = download_ottawa_job_list_content()
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
