@@ -1,23 +1,13 @@
 todo:
-  ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
-  ✔ update @done(2016-12-14 14:55) @project(todo)
-  ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
-  ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
-  ✔ bugs in contains: Manager, Digital Service & Innovation @done(2016-12-14 16:23) @project(todo)
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ XML Feeds
-  ✔ Return to homepage : add icon @done(2016-12-14 16:38) @project(todo)
-  ✔ Add contributions of Denis @done(2016-12-14 16:38) @project(todo)
 
 Advanced:
   ☐ Testing
-  ✔ Background color for 'Expiring date' @done(2016-12-14 16:38) @project(Advanced)
   ☐ Download data to be in JSON, SQL and XML format, YAML
-  ✔ About: how-to same layout for date @done(2016-12-14 16:38) @project(Advanced)
-  ☐ About: Robots.txt and Humans.txt
-  ☐ Pagination where is the last button
+  ☐ Pagination where is the last button???
   ☐ Retrieve data from ELUTA not OttawaCityJobs
   ☐ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same
 
@@ -28,6 +18,16 @@ ReactJS:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
+  ✔ update @done(2016-12-14 14:55) @project(todo)
+  ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
+  ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
+  ✔ bugs in contains: Manager, Digital Service & Innovation @done(2016-12-14 16:23) @project(todo)
+  ✔ Return to homepage : add icon @done(2016-12-14 16:38) @project(todo)
+  ✔ Add contributions of Denis @done(2016-12-14 16:38) @project(todo)
+  ✔ Background color for 'Expiring date' @done(2016-12-14 16:38) @project(Advanced)
+  ✔ About: how-to same layout for date @done(2016-12-14 16:38) @project(Advanced)
+  ✔ About: Robots.txt and Humans.txt @done(2016-12-14 16:41) @project(Advanced)
   ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
   ✔ Remove - Language Switcher @done(2016-12-14 14:22) @project(todo)
   ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
