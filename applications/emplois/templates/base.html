@@ -187,11 +187,13 @@ div.jumbotron img{
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-            {% ifequal LANGUAGE_CODE "en" %}
-              <li><a href="/fr{{ request.get_full_path|slice:'3:' }}">Français</a></li>
-            {% else %}
-              <li><a href="/en{{ request.get_full_path|slice:'3:' }}">English</a></li>
-            {% endifequal %}
+            {% if  'searchjob' not in request.get_full_path %}
+                {% ifequal LANGUAGE_CODE "en" %}
+                  <li><a href="/fr{{ request.get_full_path|slice:'3:' }}">Français</a></li>
+                {% else %}
+                  <li><a href="/en{{ request.get_full_path|slice:'3:' }}">English</a></li>
+                {% endifequal %}
+            {% endif %}
             <li><a href="{% url 'emplois:stats' %}">{% trans "Stats"%}</a></li>
             <li><a href="{% url 'emplois:about' %}">{% trans "About"%}</a></li>
             <li><a href="{% url 'emplois:download' %}">{% trans "Download"%}</a></li>
@@ -237,84 +239,6 @@ div.jumbotron img{
  |____\__,_|_||_\__, |\_,_\__,_\__, \___|
                 |___/          |___/
 -->
-  <div class="col-lg-12">
-
-
-<br/>
-
-<div class="row text-right">
-<br>
-<form action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
-    <ul class="nav navbar-nav navbar-right language menu">
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-            <li>
-                <button type="submit"
-                        name="language"
-                        value="{{ language.code }}"
-                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %} btn btn-primary btn-xs">
-                    {{ language.name_local }}
-                </button>
-            </li>
-        {% endfor %}
-    </ul>
-</form>
-
-
-
-<br>
-{% ifequal LANGUAGE_CODE "en" %}
-       <a href="/fr{{ request.get_full_path|slice:'3:' }}">Frencha</a>
-{% else %}
-       <a href="/en{{ request.get_full_path|slice:'3:' }}">English</a>
-{% endifequal %}
-<br>
-
-<ul class="nav navbar-nav navbar-right language menu">
-    {% get_current_language as LANGUAGE_CODE %}
-    {% get_available_languages as LANGUAGES %}
-    {% get_language_info_list for LANGUAGES as languages %}
-    {% for language in languages %}
-        <li>
-            <a href="/{{ language.code }}{{ request.get_full_path|slice:'3:' }}"
-               class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}"
-               lang="{{ language.code }}">
-                {{ language.name_local }}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
-
-<br>
-
-
-    <form action="/i18n/setlang/" method="post" id="language" class="auto_submit_item">
-    {% csrf_token %}
-
-    <select name="language" class="selectpicker" data-live-search="true">
-        <option value="fr">{% trans "Langue" %}</option>
-        {% for lang in LANGUAGES %}
-        <option value="{{ lang.0 }}">{{ lang.1 }}</option>
-        {% endfor %}
-    </select>
-    </form>
-
-  {% get_language_info for LANGUAGE_CODE as lang %}
-
-  <!--
-  Language code: {{ lang.code }}<br />
-  Name of language: {{ lang.name_local }}<br />
-  Name in English: {{ lang.name }}<br />
-  Bi-directional: {{ lang.bidi }}
-  Name in the active language: {{ lang.name_translated }}
-  -->
-
-</div>
-</div><!-- div col-lg-12 end -->
 
 <br>
 

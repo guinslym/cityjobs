@@ -3,6 +3,7 @@ todo:
   ☐ Remove - Translation
     ☐ SearchJobs
     ☐ Emplois Detail
+    ☐ by slug
   ☐ one urls
   ☐ tests utils.py
   ☐ XML Feeds
