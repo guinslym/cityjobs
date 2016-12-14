@@ -19,19 +19,24 @@ from django.contrib import admin
 from django.conf.urls.static import static
 admin.autodiscover()
 from applications.emplois.views import robot_files
+from django.conf.urls.i18n import i18n_patterns
 
 #from applications.cityjobs.views import *
 
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
+]
 
+
+urlpatterns += i18n_patterns(
     url(r'^emplois/', include('applications.emplois.urls', namespace="emplois")),
     url(r'^', include('applications.emplois.urls')),
 
     # i18n
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': False}),
-]# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+)# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'applications.emplois.views.handler404'
 handler500 = 'applications.emplois.views.handler500'

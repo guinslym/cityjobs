@@ -238,7 +238,29 @@ div.jumbotron img{
 <br/>
 
 <div class="row text-right">
-<!--
+<br>
+<form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+    <ul class="nav navbar-nav navbar-right language menu">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <li>
+                <button type="submit"
+                        name="language"
+                        value="{{ language.code }}"
+                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                    {{ language.name_local }}
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+</form>
+
+
+
 <br>
 {% ifequal LANGUAGE_CODE "en" %}
        <a href="/fr{{ request.get_full_path|slice:'3:' }}">Frencha</a>
@@ -261,7 +283,7 @@ div.jumbotron img{
         </li>
     {% endfor %}
 </ul>
--->
+
 <br>
 
 
