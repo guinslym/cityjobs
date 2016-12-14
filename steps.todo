@@ -1,5 +1,6 @@
 todo:
   ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
+  ☐ Stats...
   ☐ Same layout for expiration date
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
