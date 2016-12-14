@@ -1,7 +1,7 @@
 django==1.8.13
 django-allauth==0.23.0
 djangorestframework==3.3.1
-django-bootstrap-pagination==1.5.1
+django-bootstrap-pagination==1.6.2
 django-filter==0.13.0
 markdown==2.6.6
 django-extensions==1.6.1
