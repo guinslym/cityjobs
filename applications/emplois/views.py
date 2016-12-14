@@ -152,12 +152,12 @@ def detail(request):
                     language=(self.request.LANGUAGE_CODE).upper())
     return render(request, 'emplois/details.html', {'job':obj})
 
+
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
     """
     Return the detail content of a job
 
-    NOTES???: The language is set by default
     """
     model = Job
     paginate_by = 10
@@ -171,10 +171,13 @@ class DetailView(generic.DetailView):
 
     def get_queryset(self, **kwargs):
         #import ipdb; ipdb.set_trace()
-        
+
         pk = int(self.kwargs.get('pk'))
         obj = Job.objects.get(pk=pk)
-        obj = Job.objects.filter(JOBREF__contains=obj.JOBREF.split('-')[-1], language=(self.request.LANGUAGE_CODE).upper())
+        obj = Job.objects.filter(
+                JOBREF__contains=obj.JOBREF.split('-')[-1], 
+                language=(self.request.LANGUAGE_CODE).upper()
+                )
         return obj
 
 #http://localhost:8001/emplois/stats
@@ -348,4 +351,3 @@ def handler500(request):
     logger.info('Error page not found 500')
     response.status_code = 500
     return response
-
