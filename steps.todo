@@ -9,7 +9,7 @@ todo:
 
 Advanced:
   ☐ Testing
-  ☐ Download data to be in JSON, SQL and XML format, YAML
+  ☐ Downloaded data to be in JSON, SQL and XML format, YAML
   ✔ Pagination where is the last button??? @done(2016-12-14 17:02) @project(Advanced)
   ☐ Retrieve data from ELUTA not neccessarly from OttawaCityJobs
   ☐ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same
