@@ -4,9 +4,6 @@ This web application provides the current and past job opportunities at the City
 
 
 
-[![guinslym](https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg)](http://uifaces.com/guinslym)
-
-
 ## Contributing
 
 1. Star it :)
@@ -16,3 +13,7 @@ This web application provides the current and past job opportunities at the City
 5. Commit your changes (`git commit -am 'Add some feature'`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create a new Pull Request
+
+
+
+[![guinslym](https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg)](http://uifaces.com/guinslym)
