@@ -1,6 +1,7 @@
 todo:
   ☐ Languages to set differently
   ☐ DetailView remove (Languages-Switching)
+  ☐ one urls
   ☐ tests utils.py
   ☐ add Ottawajobs components
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
