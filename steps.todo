@@ -3,11 +3,11 @@ todo:
   ✔ update @done(2016-12-14 14:55) @project(todo)
   ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
   ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
-  ☐ buts in contains: Manager, Digital Service & Innovation
+  ☐ bugs in contains: Manager, Digital Service & Innovation
   ☐ Try for paginating jobSearch
   ☐ tests utils.py
-  ☐ XML Feeds
   ☐ SiteMaps
+  ☐ XML Feeds
   ☐ Add contributions of Denis
 
 Advanced:
