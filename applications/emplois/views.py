@@ -147,12 +147,11 @@ class AllJobsView(generic.ListView):
 
 def detail(request):
     obj = get_object_or_404(Job, pk=request.pk)
-    obj = get_object_or_404(
-        Job.objects.filter(
+    obj = Job.objects.filter(
                     JOBREF__contains=obj.JOBREF.split('-')[-1],
                     language=(self.request.LANGUAGE_CODE).upper())
-        )
-    return render(request, 'emplois/details.html', context)
+    #return render(request, 'emplois/details.html', context)
+    return get_object_or_404(Job, pk=self.kwargs.get('pk', None))
 
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
@@ -173,7 +172,7 @@ class DetailView(generic.DetailView):
 
     def get_queryset(self, **kwargs):
         #import ipdb; ipdb.set_trace()
-        
+
         pk = int(self.kwargs.get('pk'))
         obj = Job.objects.get(pk=pk)
         obj = Job.objects.filter(JOBREF__contains=obj.JOBREF.split('-')[-1], language=(self.request.LANGUAGE_CODE).upper())
@@ -350,4 +349,3 @@ def handler500(request):
     logger.info('Error page not found 500')
     response.status_code = 500
     return response
-
