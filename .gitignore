@@ -21,6 +21,8 @@ cache/
 #*/prod.log
 #*/*.log
 
+ottawacitycarreers_cron.py
+secretkey_update.txt
 #*.sqlite3
 secret_key.txt
 #settings/production.py

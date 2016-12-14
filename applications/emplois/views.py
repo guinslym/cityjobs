@@ -2,9 +2,12 @@
 
 # Standard Python module
 from json import dumps, loads
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
+
+import os
 
 #Django
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.utils import timezone
@@ -293,14 +296,26 @@ def download(request):
 
 
 
-def update_and_tweets(request):
+def update_and_tweets(request, password):
     """
     This will update or tweet
     depending on the time
     """
-    logger.info('Updating the list of jobs')
     from datetime import datetime, timedelta, time
     from pytz import timezone
+    import os
+    logger.info('reading the secret file for updating the database')
+    my_secret_file = os.path.join(settings.BASE_DIR, 'secretkey_update.txt')
+    try:
+        with open(my_secret_file) as f:
+            SECRET_KEY = f.read().strip()
+    except:
+        SECRET_KEY='1231231'
+
+    if password != SECRET_KEY:
+        logger.info('Wrong password to update the Database with Jobs')
+        return redirect('/')
+    logger.info('Updating the list of jobs')
 
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)

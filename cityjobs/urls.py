@@ -27,7 +27,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$', robot_files, name='home-files'),
     url(r'^searchJobs/$', cache_page(60 * 15)('applications.emplois.views.job_search'), name='job_search'),
-    url(r'^update/$', update_and_tweets, name='upgrade'),
+    url(r'^update/(?P<password>[A-Za-z0-9]+)$', update_and_tweets, name='upgrade'),
 ]
 
 
