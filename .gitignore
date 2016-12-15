@@ -19,7 +19,7 @@ tests/report/
 cache/
 #*/dev.log
 #*/prod.log
-#*/*.log
+*/*.log
 
 ottawacitycarreers_cron.py
 secretkey_update.txt
