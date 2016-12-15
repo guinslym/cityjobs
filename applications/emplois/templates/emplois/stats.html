@@ -30,6 +30,13 @@ so I decided to put the css and js in a partial -->
     <p>&nbsp;</p>
 </div>
 
+<style>
+.already_expired{
+	font-style: italic;
+	color: #999;
+}
+</style>
+
 {% get_current_language as LANGUAGE_CODE %}
 <script type="text/javascript">
    var lang = "{{ LANGUAGE_CODE }}"
@@ -75,6 +82,8 @@ cal.init({
   var le_mois = date.getMonth() + 1;
   var l_annee = date.getFullYear();
 
+	var today = new Date();
+
   //console.log(le_jour);
   //console.log(le_mois);
   //console.log(l_annee);
@@ -95,12 +104,22 @@ var jqxhr = $.ajax({
     data.forEach(function(entry) {
       //console.log(entry);
       //console.log(entry['fields']['slug'])
-      //console.log(entry['fields']['POSITION']);
+			console.log(entry['fields']['EXPIRYDATE']);
+      expirydate = Date.parse(entry['fields']['EXPIRYDATE']);
       position = entry['fields']['POSITION'];
+			greater = false;
+			if (expirydate > today){
+				expirydate = entry['fields']['EXPIRYDATE'];
+			}else{
+				expirydate = entry['fields']['EXPIRYDATE'] + "<span class='already_expired'> -> already expired</span>";
+			}
+
+			sentence = "Position : <b style='font-size:18px;'><a href=\"/" + lang +"/emplois/" + entry['pk'] + '/' + "\"</a>" +  position + " </b><br/>" + " date : " +"<b>" +
+		 expirydate + "</b> <br/> ";
+
 
       $("#onClick-placeholder").append(
-       "Position : <b style='font-size:18px;'><a href=\"/" + lang +"/emplois/" + entry['pk'] + '/' + "\"</a>" +  position + " </b><br/>" + " date : " +"<b>" +
-      date.toLocaleDateString(lang + '-CA') + "</b> <br/> <b>" + "</b>"
+       sentence
     );
 
     });
