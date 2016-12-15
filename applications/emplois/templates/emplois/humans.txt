@@ -5,8 +5,9 @@
     Guinsly Mondesir -- Developer -- @guinslym
 
 # THANKS
-    Thanks to Open Data Book club Meetup and Open Data Ottawa
+    Thanks to the Open Data Book club Meetup and Open Data Ottawa
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY
     Django
     Twitter Bootstrap
+    OttawaCityJobs.ca
