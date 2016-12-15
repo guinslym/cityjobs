@@ -3,8 +3,9 @@ todo:
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ RSS Feeds
-  ☐ - Already expired
-  ☐ Static files
+  ☐ adding a menu for all expired job posting
+  ✔ - Already expired @done(2016-12-15 12:47) @project(todo)
+  ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
 
 Advanced:
