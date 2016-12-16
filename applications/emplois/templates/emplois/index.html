@@ -41,6 +41,8 @@
 
 {#% load cache %#}
 {#% cache 500 sidebar %#}
+{% now "Y-m-d" as todays_date %}
+
 
 <div class="outterspace">
 
@@ -50,7 +52,11 @@
 	{% for emploi in latest_jobs_list %}
 	<div class="filterWrap">
 
-		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.POSITION }}.</a></h3>
+		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.POSITION }}.</a>
+				{% if todays_date > emploi.EXPIRYDATE|date:"Y-m-d" %}
+				  <small><i class="fa fa-ban" aria-hidden="true"></i></small>
+				{% endif %}
+			</h3>
 
 		<p>
      	{% autoescape off %}
