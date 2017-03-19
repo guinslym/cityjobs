@@ -1,5 +1,15 @@
 todo:
-  ☐ Try for paginating jobSearch
+  ✔ Add cityjobs Github repo @done (17-03-19 17:17)
+  ☐ Adding Twitter posts (6 times a day) --- create special routes
+  ☐ Makefile
+  ☐ Form Search job to put in Absolute url (base.html)
+  ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
+  ☐ Add Font awesome Arrow with abbr meaning the Order of the select
+  ☐ Tests
+  ☐ Download PDFs
+  ☐ Download file (json) (xml) in the cache
+  ☐ Increase the size of the D3.js calendar
+  ☐ Take the api of ottawacityjobs and put it into utils.py
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ RSS Feeds
