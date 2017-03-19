@@ -10,6 +10,7 @@ todo:
   ☐ Download file (json) (xml) in the cache
   ☐ Increase the size of the D3.js calendar
   ☐ Take the api of ottawacityjobs and put it into utils.py
+  ☐ Add a command to add secret_key_update into path if it's development
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ RSS Feeds
