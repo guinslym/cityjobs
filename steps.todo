@@ -1,7 +1,5 @@
 todo:
-  ✔ Download the repo on the server @done (17-03-22 11:58)
   ☐ Adding Twitter posts (6 times a day) --- create special routes
-  ✔ Makefile @done (17-03-22 12:15)
   ☐ Form Search job to put in Absolute url (base.html)
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
   ☐ Add Font awesome Arrow with abbr meaning the Order of the select
@@ -10,20 +8,15 @@ todo:
   ☐ Download file (json) (xml) in the cache
   ☐ Increase the size of the D3.js calendar
   ☐ Take the api of ottawacityjobs and put it into utils.py
-  ✔ Add a command to add secret_key_update into path if it's development @done (17-03-22 12:17)
   ☐ tests utils.py
-  ☐ SiteMaps
-  ☐ RSS Feeds
   ☐ adding a menu for all expired job posting
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
+  ☐ SiteMaps
+  ☐ RSS Feeds
 
 Advanced:
-  ☐ Testing
-  ☐ Downloaded data to be in JSON, SQL and XML format, YAML
-  ☐ Retrieve data from ELUTA not neccessarly from OttawaCityJobs
-  ☐ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same
 
 ReactJS:
   ☐ Adding ReactJS
@@ -56,6 +49,13 @@ Archive:
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ Verify that the old dates are Veridict meaning if I went to the PDF it will be the same @done (17-03-22 12:18) @project(Advanced)
+ ✔ Testing @done (17-03-22 12:18) @project(Advanced)
+ ✔ Retrieve data from ELUTA not neccessarly from OttawaCityJobs @done (17-03-22 12:18) @project(Advanced)
+ ✔ Downloaded data to be in JSON, SQL and XML format, YAML @done (17-03-22 12:18) @project(Advanced)
+ ✔ Add a command to add secret_key_update into path if it's development @done (17-03-22 12:17) @project(todo)
+ ✔ Makefile @done (17-03-22 12:15) @project(todo)
+ ✔ Download the repo on the server @done (17-03-22 11:58) @project(todo)
  ✔ Add cityjobs Github repo @done (17-03-19 17:17) @project(todo)
   ✔ remove the process to create a file @done (16-12-13 07:59)
   ✔ download the sqlite @done (16-12-13 07:15)
