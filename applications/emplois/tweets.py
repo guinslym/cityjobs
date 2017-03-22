@@ -3,6 +3,18 @@
 import tweepy
 import time, sys, os
 from .models import Job
+"""
+
+This SCRIPT is from a Bot that I created in 2016
+
+https://twitter.com/ottawa_emplois
+
+I deactivated this bot
+
+I then adapted this bot to this app in case that I want to reactivate it
+
+
+"""
 
 
 #@cityofottawajob 
