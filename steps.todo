@@ -1,20 +1,20 @@
 todo:
-  ☐ Tests
   ☐ Download PDFs
-  ☐ Download file (json) (xml) in the cache
   ☐ Adding Twitter posts (6 times a day) --- create special routes
   ☐ Take the api of ottawacityjobs and put it into utils.py
-  ☐ tests utils.py
+  ☐ Tests
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
+  ☐ Télécharger
   ☐ Translation for index.html Ordre Order == plus petit au plus grand
 
 Advanced:
 
 ReactJS:
   ☐ adding a menu for all expired job posting
+  ☐ A more efficient way to download the DB. (not overkill processes)
   ☐ Adding ReactJS
   ☐ Adding ReduxJS
   ☐ Adding Authentification for download all the JSON
@@ -45,6 +45,8 @@ Archive:
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ tests utils.py @done (17-03-22 15:00) @project(todo)
+ ✔ Download file (json) (xml) in the cache @done (17-03-22 14:55) @project(todo)
  ✔ SiteMaps --no need @done (17-03-22 14:47) @project(todo)
  ✔ RSS Feeds --no need @done (17-03-22 14:47) @project(todo)
  ✔ adding a menu for all expired job posting ---postpone @done (17-03-22 14:46) @project(todo)

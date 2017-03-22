@@ -456,3 +456,12 @@ IndentationError: unindent does not match any outer indentation level
 [2017-03-22 13:55:15,313] WARNING % : Not Found: /
 [2017-03-22 13:58:58,378] WARNING % : Not Found: /
 [2017-03-22 13:59:43,376] WARNING % : Not Found: /
+[2017-03-22 14:53:11,069] ERROR % : Internal Server Error: /fr/emplois/download/
+Traceback (most recent call last):
+  File "C:\Users\gmondesi\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\gmondesi\Documents\GitHub\cityjobs\applications\emplois\views.py", line 305, in download
+    response = HttpResponse(mimetype='application/force-download')
+  File "C:\Users\gmondesi\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\http\response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'mimetype'

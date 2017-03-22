@@ -284,6 +284,7 @@ def emplois(request):
     return HttpResponse(data, content_type='application/json')
 
 #http://localhost:8001/emplois/download
+@cache_page(60 * 1, key_prefix="site1" )
 def download(request):
     """
     This will return all the Job objects form the DB
@@ -293,7 +294,6 @@ def download(request):
     data = serializers.serialize('json', Job.objects.all() )
     data = dumps(loads(data), indent=4, ensure_ascii=True, sort_keys=True)
     return HttpResponse(data, content_type='application/json')
-
 
 
 def update_and_tweets(request, password):
