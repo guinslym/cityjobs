@@ -229,11 +229,11 @@ div.jumbotron img{
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png">
 
 
-       <form accept-charset="UTF-8" action="searchJobs/" class="form-group main-form" id="search-form" method="get">
+       <form accept-charset="UTF-8" action="http://127.0.0.1:8000/fr/searchJobs/" class="form-group main-form" id="search-form" method="get">
        {% csrf_token %}
           <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
           <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
-          <input class="btn btn-warning" type="submit" value="{% trans "Search" %}">
+          <input class="btn btn-warning" type="submit" value="{% trans 'Search' %}">
        </form>
 
 </div>
