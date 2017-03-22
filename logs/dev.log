@@ -496,3 +496,15 @@ TypeError: __init__() got an unexpected keyword argument 'mimetype'
 [2017-03-22 17:15:13,247] WARNING % : Not Found: /indexapp/
 [2017-03-22 17:15:13,292] WARNING % : Not Found: /emplois/sdfjal
 [2017-03-22 17:15:13,309] WARNING % : Not Found: /emplois/
+[2017-03-22 17:17:51,745] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:17:51,794] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:17:51,808] WARNING % : Not Found: /emplois/
+[2017-03-22 17:18:09,757] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:18:09,803] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:18:09,817] WARNING % : Not Found: /emplois/
+[2017-03-22 17:18:31,422] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:18:31,473] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:18:31,490] WARNING % : Not Found: /emplois/
+[2017-03-22 17:20:07,503] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:20:07,556] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:20:07,573] WARNING % : Not Found: /emplois/
