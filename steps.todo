@@ -1,5 +1,5 @@
 todo:
-  ✔ Add cityjobs Github repo @done (17-03-19 17:17)
+  ☐ Download 
   ☐ Adding Twitter posts (6 times a day) --- create special routes
   ☐ Makefile
   ☐ Form Search job to put in Absolute url (base.html)
@@ -15,7 +15,6 @@ todo:
   ☐ SiteMaps
   ☐ RSS Feeds
   ☐ adding a menu for all expired job posting
-  ✔ - Already expired @done(2016-12-15 12:47) @project(todo)
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
 
@@ -32,31 +31,33 @@ ReactJS:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
-  ✔ Update : add new jobs @done(2016-12-14 17:06) @project(todo)
-  ✔ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now @done(2016-12-14 17:20) @project(todo)
+ ✔ - Already expired @done(2016-12-15 12:47) @project(todo) @project(todo)
   ✔ Cronjobs @done(2016-12-14 18:17) @project(todo)
+  ✔ Can add new jobs but the Queries doesn't work for: expired in 2 weeks from now @done(2016-12-14 17:20) @project(todo)
+  ✔ Update : add new jobs @done(2016-12-14 17:06) @project(todo)
   ✔ Pagination where is the last button??? @done(2016-12-14 17:02) @project(Advanced)
-  ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
-  ✔ update @done(2016-12-14 14:55) @project(todo)
-  ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
-  ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
-  ✔ bugs in contains: Manager, Digital Service & Innovation @done(2016-12-14 16:23) @project(todo)
-  ✔ Return to homepage : add icon @done(2016-12-14 16:38) @project(todo)
-  ✔ Add contributions of Denis @done(2016-12-14 16:38) @project(todo)
-  ✔ Background color for 'Expiring date' @done(2016-12-14 16:38) @project(Advanced)
-  ✔ About: how-to same layout for date @done(2016-12-14 16:38) @project(Advanced)
   ✔ About: Robots.txt and Humans.txt @done(2016-12-14 16:41) @project(Advanced)
-  ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
+  ✔ Return to homepage : add icon @done(2016-12-14 16:38) @project(todo)
+  ✔ Background color for 'Expiring date' @done(2016-12-14 16:38) @project(Advanced)
+  ✔ Add contributions of Denis @done(2016-12-14 16:38) @project(todo)
+  ✔ About: how-to same layout for date @done(2016-12-14 16:38) @project(Advanced)
+  ✔ bugs in contains: Manager, Digital Service & Innovation @done(2016-12-14 16:23) @project(todo)
+  ✔ Stats...links @done(2016-12-14 16:01) @project(todo)
+  ✔ update @done(2016-12-14 14:55) @project(todo)
+  ✔ Same layout for expiration date @done(2016-12-14 14:55) @project(todo)
+  ✔ Translate Job found {} --> Can't find it @done(2016-12-14 14:25) @project(todo)
   ✔ Remove - Language Switcher @done(2016-12-14 14:22) @project(todo)
-  ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
-  ✔ Emplois Detail @done(2016-12-14 14:21) @project(todo)
+  ✔ Languages to set differently @done(2016-12-14 14:22) @project(todo)
   ✔ one urls @done(2016-12-14 14:21) @project(todo)
-  ✔ Favicon @done(2016-12-14 12:37) @project(todo)
+  ✔ Emplois Detail @done(2016-12-14 14:21) @project(todo)
+  ✔ SearchJobs @done(2016-12-14 14:20) @project(todo)
   ✔ Title fr or EN @done(2016-12-14 12:40) @project(todo)
-  ✔ download the sqlite @done (16-12-13 07:15)
-  ✔ remove the process to create a file @done (16-12-13 07:59)
-  ✔ Load new data into databases @done (16-12-12 23:10)
-  ✔ Check Posted within last 2 weeks @done (16-12-12 23:10)
-  ✔ Check Will expired 2 weeks from now @done (16-12-12 23:10)
-  ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+  ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
+  ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ Add cityjobs Github repo @done (17-03-19 17:17) @project(todo)
+  ✔ remove the process to create a file @done (16-12-13 07:59)
+  ✔ download the sqlite @done (16-12-13 07:15)
+  ✔ Load new data into databases @done (16-12-12 23:10)
+  ✔ Check Will expired 2 weeks from now @done (16-12-12 23:10)
+  ✔ Check Posted within last 2 weeks @done (16-12-12 23:10)
