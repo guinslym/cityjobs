@@ -11,6 +11,7 @@ todo:
   ☐ Take the api of ottawacityjobs and put it into utils.py
   ☐ tests utils.py
   ☐ adding a menu for all expired job posting
+  ☐ Homepage logo to link to English or French site
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile

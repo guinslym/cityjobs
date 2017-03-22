@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load staticfiles %}
+{% load search_form_url %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,8 +229,8 @@ div.jumbotron img{
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png">
 
-
-       <form accept-charset="UTF-8" action="http://127.0.0.1:8000/fr/searchJobs/" class="form-group main-form" id="search-form" method="get">
+      {% get_current_language as LANGUAGE_CODE %}
+       <form accept-charset="UTF-8" action="{% seach_form_url request.build_absolute_uri LANGUAGE_CODE  %}" class="form-group main-form" id="search-form" method="get">
        {% csrf_token %}
           <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
           <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
