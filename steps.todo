@@ -2,6 +2,7 @@ todo:
   ✔ Form Search job to put in Absolute url (base.html) @done (17-03-22 13:58)
   ✔ create TemplateTags to create url @done (17-03-22 13:58)
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
+  ☐ base.html in Fr jobs Found
   ☐ Add Font awesome Arrow with abbr meaning the Order of the select
   ☐ Tests
   ☐ Download PDFs
@@ -11,7 +12,7 @@ todo:
   ☐ Take the api of ottawacityjobs and put it into utils.py
   ☐ tests utils.py
   ☐ adding a menu for all expired job posting
-  ☐ Homepage logo to link to English or French site
+  ✔ Homepage logo to link to English or French site @done (17-03-22 14:06)
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
