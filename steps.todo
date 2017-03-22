@@ -1,20 +1,15 @@
 todo:
-  ✔ Add Font awesome Arrow with abbr meaning the Order of the select @done (17-03-22 14:21)
   ☐ Tests
   ☐ Download PDFs
   ☐ Download file (json) (xml) in the cache
   ☐ Adding Twitter posts (6 times a day) --- create special routes
-  ✔ Increase the size of the D3.js calendar @done (17-03-22 14:43)
   ☐ Take the api of ottawacityjobs and put it into utils.py
   ☐ tests utils.py
-  ✔ adding a menu for all expired job posting ---postpone @done (17-03-22 14:46)
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
   ☐ Translation for index.html Ordre Order == plus petit au plus grand
-  ☐ SiteMaps
-  ☐ RSS Feeds
 
 Advanced:
 
@@ -50,6 +45,11 @@ Archive:
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ SiteMaps --no need @done (17-03-22 14:47) @project(todo)
+ ✔ RSS Feeds --no need @done (17-03-22 14:47) @project(todo)
+ ✔ adding a menu for all expired job posting ---postpone @done (17-03-22 14:46) @project(todo)
+ ✔ Increase the size of the D3.js calendar @done (17-03-22 14:43) @project(todo)
+ ✔ Add Font awesome Arrow with abbr meaning the Order of the select @done (17-03-22 14:21) @project(todo)
  ✔ Homepage logo to link to English or French site @done (17-03-22 14:06) @project(todo)
  ✔ create TemplateTags to create url @done (17-03-22 13:58) @project(todo)
  ✔ Form Search job to put in Absolute url (base.html) @done (17-03-22 13:58) @project(todo)
