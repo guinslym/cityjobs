@@ -1,7 +1,7 @@
 todo:
   ✔ Download the repo on the server @done (17-03-22 11:58)
   ☐ Adding Twitter posts (6 times a day) --- create special routes
-  ☐ Makefile
+  ✔ Makefile @done (17-03-22 12:15)
   ☐ Add Content into the Makefile
   ☐ Form Search job to put in Absolute url (base.html)
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
