@@ -48,7 +48,7 @@ msgstr "Langue"
 #: emplois/templates/emplois/index.html:9
 #: emplois/templates/emplois/result.html:9
 msgid "Job list"
-msgstr "Liste d'emploi"
+msgstr "Offres d'emplois"
 
 #: emplois/templates/emplois/index.html:17
 #: emplois/templates/emplois/result.html:16
