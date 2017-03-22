@@ -1,6 +1,6 @@
 todo:
-  ☐ Form Search job to put in Absolute url (base.html)
-  ☐ create TemplateTags to create url
+  ✔ Form Search job to put in Absolute url (base.html) @done (17-03-22 13:58)
+  ✔ create TemplateTags to create url @done (17-03-22 13:58)
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
   ☐ Add Font awesome Arrow with abbr meaning the Order of the select
   ☐ Tests
