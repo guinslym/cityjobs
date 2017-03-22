@@ -1,9 +1,10 @@
 todo:
-  ☐ Download PDFs
-  ☐ Adding Twitter posts (6 times a day) --- create special routes
-  ☐ Take the api of ottawacityjobs and put it into utils.py
-  ☐ Tests
+  ✔ Download PDFs (1hr) @done (17-03-22 16:06)
+  ☐ Adding Twitter posts (6 times a day) --- create special routes (1hr)
+  ☐ Take the api of ottawacityjobs and put it into utils.py (1hr)
+  ☐ Tests (1hr)
   ☐ Static files on production
+  ☐ Makefileso
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
@@ -11,6 +12,9 @@ todo:
   ☐ Translation for index.html Ordre Order == plus petit au plus grand
 
 Advanced:
+ ☐ http://stackoverflow.com/questions/36392510/django-download-a-file
+ ☐ Twitter bots
+ ☐ http://stackoverflow.com/questions/3096649/django-download-file-from-server-to-users-machine-or-read-online
 
 ReactJS:
   ☐ adding a menu for all expired job posting
