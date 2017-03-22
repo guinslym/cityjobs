@@ -465,3 +465,34 @@ Traceback (most recent call last):
   File "C:\Users\gmondesi\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\http\response.py", line 340, in __init__
     super(HttpResponse, self).__init__(*args, **kwargs)
 TypeError: __init__() got an unexpected keyword argument 'mimetype'
+[2017-03-22 16:46:00,259] WARNING % : Not Found: /admin/login
+[2017-03-22 16:49:24,111] WARNING % : Not Found: /en-us/emplois/
+[2017-03-22 16:49:24,214] WARNING % : Not Found: /about
+[2017-03-22 16:52:30,544] WARNING % : Not Found: /en-us/emplois/
+[2017-03-22 16:52:30,656] WARNING % : Not Found: /about
+[2017-03-22 16:58:46,940] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 16:58:47,009] WARNING % : Not Found: /emplois/
+[2017-03-22 17:05:40,473] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:05:40,510] WARNING % : Not Found: /emplois/
+[2017-03-22 17:07:07,749] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:07:18,813] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:07:52,076] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:07:52,095] WARNING % : Not Found: /emplois/
+[2017-03-22 17:07:58,943] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:08:18,998] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:08:19,012] WARNING % : Not Found: /emplois/
+[2017-03-22 17:08:43,235] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:09:04,800] WARNING % : Not Found: /indexapp
+[2017-03-22 17:09:13,000] WARNING % : Not Found: /indexapp
+[2017-03-22 17:10:09,946] WARNING % : Not Found: /
+[2017-03-22 17:10:45,226] WARNING % : Not Found: /
+[2017-03-22 17:11:08,260] WARNING % : Not Found: /emplois
+[2017-03-22 17:11:22,569] WARNING % : Not Found: /
+[2017-03-22 17:13:43,282] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:13:43,299] WARNING % : Not Found: /emplois/
+[2017-03-22 17:14:05,525] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:14:05,570] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:14:05,582] WARNING % : Not Found: /emplois/
+[2017-03-22 17:15:13,247] WARNING % : Not Found: /indexapp/
+[2017-03-22 17:15:13,292] WARNING % : Not Found: /emplois/sdfjal
+[2017-03-22 17:15:13,309] WARNING % : Not Found: /emplois/
