@@ -4,10 +4,10 @@ todo:
   ☐ Download PDFs
   ☐ Download file (json) (xml) in the cache
   ☐ Adding Twitter posts (6 times a day) --- create special routes
-  ☐ Increase the size of the D3.js calendar
+  ✔ Increase the size of the D3.js calendar @done (17-03-22 14:43)
   ☐ Take the api of ottawacityjobs and put it into utils.py
   ☐ tests utils.py
-  ☐ adding a menu for all expired job posting
+  ✔ adding a menu for all expired job posting ---postpone @done (17-03-22 14:46)
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
   ☐ Mac: Add Content into the Makefile
@@ -19,6 +19,7 @@ todo:
 Advanced:
 
 ReactJS:
+  ☐ adding a menu for all expired job posting
   ☐ Adding ReactJS
   ☐ Adding ReduxJS
   ☐ Adding Authentification for download all the JSON
