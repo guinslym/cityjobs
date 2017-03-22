@@ -319,6 +319,8 @@ def update_and_tweets(request, password):
 
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)
+    #from applications.emplois.tweets import tweet_a_job
+    #tweet_a_job
     now_time = ottawa_now.time()
     #tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
     upgrade_time = True# now_time >= time(17,00) and now_time <= time(19,30)
@@ -333,6 +335,8 @@ def update_and_tweets(request, password):
     else:
         logger.info("no we didn't have new jobs in full.jsonr")
         return redirect("/")
+
+
 
 
 #http://localhost:8001/emplois/searchJobs/<searchKey>
