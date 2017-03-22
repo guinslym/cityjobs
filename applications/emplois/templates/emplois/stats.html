@@ -9,8 +9,6 @@
 so I decided to put the css and js in a partial -->
 {% include "emplois/static_include.html" %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-
 
 	<h1>{% trans "statistics" %}</h1>
 
@@ -63,8 +61,15 @@ cal.init({
   itemName: ["job", "jobs"],
 	data: {{ stats }},
 	start: thisMonth.SubtractMonth(5),
-	cellSize: 10,
-	range: 15,
+	cellSize: 12,
+  cellPadding: 5,
+  //domainGutter: 5,
+    label: {
+    position: "top"
+  },
+  tooltip: true,
+  domainDynamicDimension: false,
+	range: 8,
 	legend: [1, 2, 4, 6],
 	previousSelector: "#example-c-PreviousDomain-selector",
 	nextSelector: "#example-c-NextDomain-selector",
