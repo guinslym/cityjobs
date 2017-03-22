@@ -2,7 +2,6 @@ todo:
   ✔ Download the repo on the server @done (17-03-22 11:58)
   ☐ Adding Twitter posts (6 times a day) --- create special routes
   ✔ Makefile @done (17-03-22 12:15)
-  ☐ Add Content into the Makefile
   ☐ Form Search job to put in Absolute url (base.html)
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
   ☐ Add Font awesome Arrow with abbr meaning the Order of the select
@@ -11,13 +10,14 @@ todo:
   ☐ Download file (json) (xml) in the cache
   ☐ Increase the size of the D3.js calendar
   ☐ Take the api of ottawacityjobs and put it into utils.py
-  ☐ Add a command to add secret_key_update into path if it's development
+  ✔ Add a command to add secret_key_update into path if it's development @done (17-03-22 12:17)
   ☐ tests utils.py
   ☐ SiteMaps
   ☐ RSS Feeds
   ☐ adding a menu for all expired job posting
   ☐ Static files on production
   ☐ http://klauslaube.com.br/2016/02/03/bdd-com-django-e-behave.html
+  ☐ Mac: Add Content into the Makefile
 
 Advanced:
   ☐ Testing
