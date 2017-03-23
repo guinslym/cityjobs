@@ -71,17 +71,17 @@ LOGGING = {
              'level':'INFO',
              'propagate': True,
          },
-         'applications.delivrem.views': {
+         'applications.emplois.views': {
              'handlers': ['file'],
              'level':'INFO',
              'propagate': True,
          },
-         'applications.delivrem.utils': {
+         'applications.emplois.utils': {
              'handlers': ['file'],
              'level':'INFO',
              'propagate': True,
          },
-         'applications.delivrem.tweets': {
+         'applications.emplois.tweets': {
              'handlers': ['file'],
              'level':'INFO',
              'propagate': True,
