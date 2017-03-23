@@ -1,18 +1,12 @@
 todo:
   ☐ Static files on production
-  ☐ Mac: Add Content into the Makefile
-  ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
-  ☐ Télécharger
-  ☐ Translation for index.html Ordre Order == plus petit au plus grand
 
 Advanced:
- ☐ http://stackoverflow.com/questions/36392510/django-download-a-file
  ☐ Twitter bots
- ☐ http://stackoverflow.com/questions/3096649/django-download-file-from-server-to-users-machine-or-read-online
 
 ReactJS:
   ☐ adding a menu for all expired job posting
-  ☐ A more efficient way to download the DB. (not overkill processes)
+  ☐ A more efficient way to Downlad View. (not overkill the app on the server)
   ☐ Adding ReactJS
   ☐ Adding ReduxJS
   ☐ Adding Authentification for download all the JSON
@@ -43,6 +37,10 @@ Archive:
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa @done (17-03-22 21:29) @project(todo)
+ ✔ Télécharger @done (17-03-22 21:29) @project(todo)
+ ✔ Translation for index.html Ordre Order == plus petit au plus grand @done (17-03-22 21:29) @project(todo)
+ ✔ Mac: Add Content into the Makefile @done (17-03-22 21:29) @project(todo)
  ✔ Tests @done (17-03-22 21:13) @project(todo)
  ✔ Tests (1hr) @done (17-03-22 21:13) @project(todo)
  ✔ Makefiles @done (17-03-22 20:22) @project(todo)
