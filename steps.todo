@@ -1,8 +1,5 @@
 todo:
-  ☐ Tests (1hr)
   ☐ Static files on production
-  ☐ Tests
-  ✔ Makefiles @done (17-03-22 20:22)
   ☐ Mac: Add Content into the Makefile
   ☐ base.html in Fr Translation add offre d'emplois de la ville d'Ottawa
   ☐ Télécharger
@@ -46,6 +43,9 @@ Archive:
   ✔ Favicon @done(2016-12-14 12:37) @project(todo)
   ✔ Github to add over settings @done(2016-12-12 16:09) @project(todo)
   ✔ CDN to install @done(2016-12-12 16:04) @project(todo)
+ ✔ Tests @done (17-03-22 21:13) @project(todo)
+ ✔ Tests (1hr) @done (17-03-22 21:13) @project(todo)
+ ✔ Makefiles @done (17-03-22 20:22) @project(todo)
  ✔ Take the api of ottawacityjobs and put it into utils.py (1hr) @done (17-03-22 16:35) @project(todo)
  ✔ Adding Twitter posts (6 times a day) --- create special routes -- postpone @done (17-03-22 16:35) @project(todo)
  ✔ Download PDFs (1hr) @done (17-03-22 16:06) @project(todo)
