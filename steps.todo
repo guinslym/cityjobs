@@ -1,6 +1,7 @@
 todo:
   ☐ On a Unix/Linux machine: compile the translation (python manage.py compilemessages)
   ☐ Static files on production
+  ☐ tests
 
 Advanced:
  ☐ Twitter bots
