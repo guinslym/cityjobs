@@ -4,6 +4,9 @@ This web application provides the current and past job opportunities at the City
 
 
 ![browser](images/screenshot.3.jpg)
+[![browser](images/screenshot.3.jpg)](http://www.ottawacitycarreers.ca)
+
+
 ## Contributing
 
 1. Star it :)
