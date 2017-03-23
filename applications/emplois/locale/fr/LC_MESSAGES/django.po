@@ -19,7 +19,7 @@ msgstr ""
 
 #: emplois/templates/base.html:161
 msgid "Ottawa City Jobs"
-msgstr "Emploi à la ville d'Ottawa"
+msgstr "Offres d'emplois à la ville d'Ottawa"
 
 #: emplois/templates/base.html:170
 msgid "Stats"
@@ -31,7 +31,7 @@ msgstr "À Propos"
 
 #: emplois/templates/base.html:175
 msgid "Download"
-msgstr ""
+msgstr "Télécharger"
 
 #: emplois/templates/base.html:192
 msgid "Search by Job title"
@@ -57,8 +57,6 @@ msgstr "emplois trouvés pour"
 
 #: emplois/templates/emplois/index.html:20
 #: emplois/templates/emplois/result.html:19
-#, fuzzy
-#| msgid "jobs found for"
 msgid "jobs found"
 msgstr "emplois trouvés pour"
 
