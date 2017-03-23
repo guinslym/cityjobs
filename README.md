@@ -3,7 +3,7 @@
 This web application provides the current and past job opportunities at the City of Ottawa. The data obtained comes directly from the Ottawa Open data portal.
 
 
-
+![guinslym](https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg)
 ## Contributing
 
 1. Star it :)
