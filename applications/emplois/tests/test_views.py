@@ -19,3 +19,15 @@ class TestIndexView:
 
         resp = views.IndexView.as_view()(req)
         assert resp.status_code == 200, 'Should be callable by anyone'
+
+class LatestView:
+    def test_content(self):
+        req = RequestFactory().get('/')
+        # setting the Language
+        req.LANGUAGE_CODE = "en"
+
+        resp = views.LatestView.as_view()(req)
+        pytest.set_trace()# verify the content of the object <resp>
+        pass #assert resp.status_code == 200, 'Should be callable by anyone'
+
+#Test urls resolve also....
