@@ -18,3 +18,13 @@ test:
 test_debug:
 	@echo 'Runing py.test -x --pdb '
 	pytest -x --pdb 
+
+test_failed:
+	@echo 'only run the tests that failed the last time it was executed'
+	@ehco 'exhaustive, informative traceback formatting'
+	py.test --lf --tb=long
+
+test_failed_first:
+	@echo "all tests will be executed, but re-ordered based on whether they've failed in the previous run or not. Failures first, successful tests after."
+	@echo "Traceback: only one line per failure"
+	py.test --ff --tb=line 
