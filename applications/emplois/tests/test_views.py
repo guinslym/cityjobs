@@ -13,5 +13,9 @@ from applications.emplois import views
 class TestIndexView:
     def test_anonymous(self):
         req = RequestFactory().get('/')
+        # setting the Language
+        req.LANGUAGE_CODE = "en"
+        req.user = AnonymousUser()
+
         resp = views.IndexView.as_view()(req)
         assert resp.status_code == 200, 'Should be callable by anyone'
