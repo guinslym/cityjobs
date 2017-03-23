@@ -13,7 +13,7 @@ docs/_build/
 docs/locale/
 node_modules/
 tests/coverage_html/
-tests/.coverage
+.coverage
 build/
 tests/report/
 cache/
@@ -29,6 +29,5 @@ secret_key.txt
 staticfiles/
 envpython3/
 htmlcov/
-applications/*/tests/
 description.todo
 python3env
