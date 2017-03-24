@@ -3,7 +3,6 @@
 This web application provides the current and past job opportunities at the City of Ottawa. The data obtained comes directly from the Ottawa Open data portal.
 
 
-![browser](images/screenshot.3.jpg)
 [![browser](images/screenshot.3.jpg)](http://www.ottawacitycarreers.ca)
 
 
