@@ -508,3 +508,32 @@ TypeError: __init__() got an unexpected keyword argument 'mimetype'
 [2017-03-22 17:20:07,503] WARNING % : Not Found: /indexapp/
 [2017-03-22 17:20:07,556] WARNING % : Not Found: /emplois/sdfjal
 [2017-03-22 17:20:07,573] WARNING % : Not Found: /emplois/
+[2017-03-26 13:44:29,812] WARNING % : Not Found: /
+[2017-03-26 13:44:35,142] WARNING % : Not Found: /favicon.ico
+[2017-03-26 13:44:35,174] WARNING % : Not Found: /favicon.ico
+[2017-03-26 14:51:53,248] ERROR % : Internal Server Error: /en/emplois/download/
+Traceback (most recent call last):
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\spulib\Documents\cityjobs\applications\emplois\views.py", line 322, in download
+    data = serializers.serialize('json', data, indent=2 )
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\serializers\__init__.py", line 129, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\serializers\base.py", line 56, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'dict' object has no attribute '_meta'
+[2017-03-26 14:55:39,337] ERROR % : Internal Server Error: /en/emplois/download/
+Traceback (most recent call last):
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\spulib\Documents\cityjobs\applications\emplois\views.py", line 313, in download
+    data = serializers.serialize('json', data, indent=2 )
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\serializers\__init__.py", line 129, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Users\spulib\AppData\Local\Continuum\Miniconda3\lib\site-packages\django\core\serializers\base.py", line 56, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'dict' object has no attribute '_meta'

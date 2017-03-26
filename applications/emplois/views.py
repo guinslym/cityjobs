@@ -291,7 +291,35 @@ def download(request):
     in JSON
     """
     import datetime
-    data = serializers.serialize('json', Job.objects.all() )
+    descriptions = Description.objects.all().select_related('jobs')
+    data = []
+    for description in descriptions:
+        data.append({
+        'id': description.jobs.id,
+        'JOBURL': description.jobs.JOBURL,
+        'EXPIRYDATE': description.jobs.EXPIRYDATE,
+        'SALARYMAX': description.jobs.SALARYMAX,
+        'SALARYMIN': description.jobs.SALARYMIN,
+        'SALARYTYPE': description.jobs.SALARYTYPE,
+        'NAME': description.jobs.NAME,
+        'language': description.jobs.language,
+        'POSITION': description.jobs.POSITION,
+        'JOBREF': description.jobs.JOBREF,
+        'JOB_SUMMARY': description.jobs.JOB_SUMMARY,
+        'POSTDATE': description.jobs.POSTDATE,
+        'slug': description.jobs.slug,
+        'tweeted': description.jobs.tweeted,
+        'description':{
+            'id': description.id,
+            'jobs': description.jobs.id,
+            'KNOWLEDGE': description.KNOWLEDGE,
+            'LANGUAGE_CERTIFICATES': description.LANGUAGE_CERTIFICATES,
+            'EDUCATIONANDEXP': description.EDUCATIONANDEXP,
+            'COMPANY_DESC': description.COMPANY_DESC,
+            'POSTDATE': description.POSTDATE,
+            }
+        })
+    data = serializers.serialize('json', Job.objects.all(), indent=2 )
     data = dumps(loads(data), indent=4, ensure_ascii=True, sort_keys=True)
     return HttpResponse(data, content_type='application/json')
 
