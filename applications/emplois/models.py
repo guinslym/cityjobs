@@ -49,11 +49,6 @@ class Description(models.Model):
     def __str__(self):
         return self.COMPANY_DESC
 
-    def natural_key(self):
-        return (self.id,) + self.jobs.natural_key()
-
-    natural_key.dependencies = ['applications.models.job']
-
     jobs = models.ForeignKey(Job, on_delete=models.CASCADE)
     KNOWLEDGE = models.TextField(blank=True, null=True)
     LANGUAGE_CERTIFICATES = models.TextField(blank=True, null=True)
